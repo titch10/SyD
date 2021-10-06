@@ -2,7 +2,7 @@
 const mongoose = require('mongoose')
 const { mongodb } = require('./config')
 
-const connection = mongoose.connect(`mongodb://chat:chat@chat.qfcap.mongodb.net/chat?retryWrites=true&w=majority`)
+const connection = mongoose.connect('mongodb+srv://ce:ce123@cluster0.y7ysl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
 .then((db)=> {
     console.log('Conexión exitosa')
 }).catch((err)=> {
