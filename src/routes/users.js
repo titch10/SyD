@@ -1,0 +1,21 @@
+const express =require ('express')
+const router=express.Router()
+const userController=require('../controllers/users')
+const verifyToken = require('../middleware/verifyToken')
+
+router.get('/all',userController.getUser)
+router.get('/pregunta',userController.getPregunta)
+router.get('/bye',userController.getBye)
+router.get('/create',userController.getCreateUser )
+router.get('/update/:id', userController.getUpdateUser)
+router.get('/delete/:id', userController.getDeleteUser)
+router.post('/create',userController.createUser)
+router.post('/update/:id',userController.updateUser)
+router.post('/delete/:id',userController.deleteUser)
+
+router.get('/admin',verifyToken.verifyToken, userController.getAdmin)
+router.post('/login', userController.login)
+router.post('/register', userController.register)
+router.get('/createAdmin', userController.getcreateAdmin)
+router.get('/allA',userController.getAdmin)
+module.exports=router

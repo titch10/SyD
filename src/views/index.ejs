@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+</head>
+<body id="bd">
+    
+    <div class="content">
+        
+        <canvas id="canvas">
+
+        </canvas>
+        <div class="colors">
+            <!--<button id="color1" onclick="change_color('red')"></button>
+            <button id="color2" onclick="change_color('yellowgreen')"></button>
+            <button id="color3" onclick="change_color('blue')"></button>-->
+            <button id="color4" onclick="change_color('yellow')"></button>
+            <button id="color5" onclick="change_color('white')"></button>
+        </div>
+        <div class="delete">
+            <button id="btn-delete" onclick="delete_all()">X</button>
+        </div>
+        <div id="users" style="display: none;">
+           Numero de usuarios conectados:  
+        </div>
+     
+        <center>
+        <div class='texto' id="div2">
+         
+            <p id="parrafo"></p>
+        
+          </div>
+          <div id="div-mostrar">
+            <a href="#" class="btn-mostrar"  onclick="mostrar()" >
+                <span id="span1"></span>
+                <span id="span2"></span>
+                <span id="span3"></span>
+                <span id="span4"></span>
+                mostrar
+            </a>
+        </div>
+        </center>
+
+        <div id="divsong" style="display: none">
+        <audio class="audio"  controls src="/canciones/Cout.mp3"></audio>
+        </div>
+       
+        <div id="div1" style="display: none">
+            <!--<form action="/users/create" method="GET">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" id="name">
+                <label for="age">Edad</label>
+                <input type="text" name="age" id="age"> 
+                <input type="submit" value="Registrar"> 
+            </form>-->
+            <a class="btn-mostrar" href="/users/pregunta">
+                <span id="span1"></span>
+                <span id="span2"></span>
+                <span id="span3"></span>
+                <span id="span4"></span>
+                siguiente</a>
+        </div>
+        <div id="div-dibujo" style="display: none">
+             <p id="parrafo-dibujo">Dibuja algo, se guardará.</p>
+        </div>
+    </div>
+    
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+</html>

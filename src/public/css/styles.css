@@ -1,0 +1,513 @@
+table{
+   margin: 0 auto;
+}
+td{
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+#btn-update{
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#btn-delete{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+#bd{
+    background: #1a0321;
+    color: white;
+    background: linear-gradient(120deg,#1a0321 25%,#22042b 50%,#1a0321 75%);
+    
+    animation: gradient 20s infinite;
+}
+
+body{
+    background: #1a0321;
+    color: white;
+}
+canvas{
+    display: block;
+}
+.content{
+    position: relative;
+}
+.colors{
+   position: absolute;
+   top: 5px;
+   padding: 5px;
+}
+.texto{
+    position: absolute;
+    top:45px;
+    padding: 40px;
+}
+
+#color1{
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border: 0px;
+    border-radius: 50%;
+    outline: none;
+}
+#color2{
+    width: 30px;
+    height: 30px;
+    background-color:yellowgreen;
+    border: 0px;
+    border-radius: 50%;
+    outline: none;
+}
+#color3{
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    border: 0px;
+    border-radius: 50%;
+    outline: none;
+}
+#color4{
+    width: 30px;
+    height: 30px;
+    background-color:yellow;
+    border: 0px;
+    border-radius: 50%;
+    outline: none;
+}
+#color5{
+    width: 30px;
+    height: 30px;
+    background-color:white;
+    border: 0px;
+    border-radius: 50%;
+    outline: none;
+}
+.delete{
+    position:absolute;
+    top: 5px;
+    padding: 2px;
+    margin-left: 72px;
+}
+
+#btn_delete{
+    width: 30px;
+    height: 30px;
+    border-color: black;
+    color: blueviolet;
+}
+#users{
+    position:absolute;
+    top: 5px;
+    padding: 10px;
+    margin-left: 80%;
+    font-size: 20px;
+    color: chartreuse;
+}
+#div1{
+    position: absolute;
+    width: 10%;
+    height: 20%;
+    top: 10%;
+    left: 80%;
+}
+
+#divsong{
+    position: absolute;
+    width: 10%;
+    height: 20%;
+    top: 0%;
+    left: 80%;
+}
+
+#div2{
+    position: fixed;
+    width: 30%;
+    height: 40%;
+    
+    top: 25%;
+    left: 35%;
+}
+#div-mostrar{
+    position: absolute;
+   
+    width: 30%;
+    height: 40%;
+    
+    top: 55%;
+    left: 38%;
+}
+#div-dibujo{
+    position: absolute;
+    top: 0%;
+    left: 10%;
+}
+#div3{
+    position: absolute;
+    width: 30%;
+    height: 40%;
+    top: 50%;
+    left: 35%;
+
+
+}
+#div4{
+    position: absolute;
+    width: 30%;
+    height: 40%;
+    top: 10%;
+    left: 35%;
+}
+#parrafo{
+    font-family: 'Indie Flower', cursive;
+    font-weight: 900;
+    font-size: 25px;
+    color: white;
+}
+#parrafo-dibujo{
+    
+    font-weight: 200;
+    font-size: 15px;
+    font-family: 'Roboto Slab', serif;
+    color: white;
+}
+#parrafodos{
+    font-family: 'Indie Flower', cursive;
+    font-weight: 900;
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    
+    top: 35%;
+    left: 44%;
+}
+#parrafotres{
+    font-family: 'Indie Flower', cursive;
+    font-weight: 900;
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    
+    top: 35%;
+    left: 39%;
+}
+
+
+.btn-mostrar{
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    font-family: 'Roboto Slab', serif;
+    
+    outline: none;
+
+    padding: 2rem;
+    margin: 5rem;
+    border-radius: 2rem;
+}
+.btn-mostrar:hover{
+    background-color: #a945c7;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+    transition-delay: 1s;
+}
+.btn-mostrar span{
+    position: absolute;
+    display: block;
+}
+#span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #a945c7);
+}
+.btn-mostrar:hover #span1{
+    left: 100%;
+    transition: 1s;
+}
+
+
+
+
+
+
+#span3{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #a945c7);
+}
+.btn-mostrar:hover #span3{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+
+
+#span2{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #a945c7);
+}
+.btn-mostrar:hover #span2{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+#span4{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #a945c7);
+}
+
+
+
+.btn-mostrar:hover #span4{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+
+
+
+
+.square{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: #1a0321;
+    font-family: 'Indie Flower', cursive;
+    color:white;
+    font-style: italic;
+    animation-name:move;
+    font-size: 15px;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+.square::after{
+    
+     counter-reset: number var(--number);
+    
+}
+.delay1{
+    animation-delay: 0.5s;
+    
+}
+.delay2{
+    animation-delay: 1s;
+
+}
+.delay3{
+    animation-delay: 1.5s;
+
+}
+.delay4{
+    animation-delay: 2s;
+
+}
+
+@keyframes move {
+    0%{
+         top: 0px; left: 0px;
+    }
+    25%{
+         top: 0px; left: 97%;
+    }
+    50%{
+         top:95%; left: 97%
+    }
+    75%{
+         top:95%; left: 0px;
+    }
+    100%{
+        top: 0px; left: 0px;
+    }
+}
+
+
+
+.btn-enviar{
+    display: inline-block;
+    padding: 12px 25px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: 900;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    position: absolute;
+    border: 2px;
+    top: 60%;
+    left: 20%;
+    font-family: 'Roboto Slab', serif;
+    
+    border-radius: 5%;
+    outline: none;
+    background-color: #2e0d38;
+}
+.btn-enviar:hover{
+    background-color: #2e0d38;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #652479, 0 0 80px #4e1a5e;
+}
+
+
+
+
+
+.btn-si{
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    border: 2px;
+    border-radius: 10%;
+    outline: none;
+    font-family: 'Roboto Slab', serif;
+
+}
+.btn-si:hover{
+    background-color: #a945c7;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #652479, 0 0 80px #4e1a5e;
+    transition-delay: 0s;
+}
+
+.btn-no{
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    font-family: 'Roboto Slab', serif;
+    
+    border: 2px;
+    border-radius: 10%;
+    outline: none;
+
+
+}
+.btn-no:hover{
+    background-color: #a945c7;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #652479, 0 0 80px #4e1a5e;
+    transition-delay: 0s;
+}
+
+
+
+
+
+.btn-caja{
+    position: relative;
+    display: inline-block;
+    padding: 25px 45px;
+    color: rgb(31, 13, 25);
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 900;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+    border: 1px;
+    border-radius: 2%;
+    outline: none;
+    font-family: 'Indie Flower', cursive;
+
+    
+}
+.btn-caja:hover{
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px #eeeeee, 0 0 40px #c0c0c0, 0 0 80px #8f8f8f;
+}
+
+
+:root{
+    --bg: #1e2345;
+    --violet: rgb(161,132, 240);
+    --pink: #d60087;
+    --turquoise: #2fdabd;
+    font-size: 10px;
+}
+.gradient-text{
+    background-image:linear-gradient(25deg, var(--violet), var(--turquoise)) ;
+    background-clip: text;
+    background-color: var(--bg);
+
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+
+    
+
+}
+h1{
+    margin: 0;
+    font-size: 8rem;
+    text-transform: uppercase;
+    font-family: 'Indie Flower', cursive;
+
+}
+.box{
+    background-color: var(--bg);
+    padding: 6rem;
+    height: calc(100vh - 27rem);
+    display: grid;
+    place-items: center;
+    border-radius: 1.5rem;
+}
+.gradient-border{
+   background: linear-gradient(100deg,var(--violet)25%,var(--turquoise)50%, var(--violet) 75%);
+   background-repeat: repeat;
+   padding: 2rem;
+   margin: 5rem;
+   border-radius: 2rem;
+   animation: gradient 5s linear infinite;
+}
+
+@keyframes gradient{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: -100rem 0;
+    }
+    
+    100%{
+        background-position: 0 0;
+    }
+}
