@@ -191,9 +191,9 @@ canvas{
     left: 44%;
 }
 #parrafotres{
-    font-family: 'Indie Flower', cursive;
-    font-weight: 900;
-    font-size: 25px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 20px;
     color: white;
     position: absolute;
     
@@ -445,7 +445,7 @@ canvas{
     border: 1px;
     border-radius: 2%;
     outline: none;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Roboto Slab', serif;
 
     
 }

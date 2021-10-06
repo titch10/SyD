@@ -135,7 +135,8 @@ const createUser = (req,res)=>{
     
     const data= req.body
     const user = new User({
-        name: data.name
+        name: data.name,
+        msg: data.msg
     })
 
     user.save((err, result)=>{

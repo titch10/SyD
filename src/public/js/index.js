@@ -86,7 +86,7 @@ function mostrar(){
     if(texto[contador]==null) {
               
               setTimeout(retraso_tres,1000);
-              setTimeout(retraso_dos,140000);
+              setTimeout(retraso_dos,20000);
               setTimeout(retraso,4000);
               document.getElementById("div2").style.display ='none';
               document.getElementById("div-mostrar").style.display ='none';
