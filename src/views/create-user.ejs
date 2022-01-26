@@ -12,12 +12,19 @@
 </head>
 <body>
     <div>
-    <p id="parrafotres">Puedes dejar un mensaje si gustas</p>
+    <p id="parrafotres">Deja algun mensaje</p>
     </div>
     <center>
     <div id="div3">
     <form action="/users/create" method="POST">
-      <input class="btn-caja" type="text" name="name" id="name">
+      <div>
+        <label  id="parrafo-dibujo">Nombre:</label> 
+        <input  type="text" name="name" id="parrafo-dibujo">   
+      </div>
+      <div>
+        <label id="parrafo-dibujo" >Mensaje:</label>
+        <textarea name="msg" id="parrafo-dibujo" cols="30" rows="10"></textarea>   
+      </div>
       <div id="div4">
       <input class="btn-enviar" type="submit" value="Enviar">
       </div>
