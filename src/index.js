@@ -8,8 +8,8 @@ const jq=require('../node_modules/jquery/dist/jquery')
 const http = require('http')
 const server = http.createServer(app)
 const fs=require('fs')
-
 const mediaserver=require('mediaserver')
+
 
 app.set('title', 'aplicacion hecha en node.js')
 app.set('port', process.env.PORT || 4000)
@@ -29,5 +29,11 @@ app.use('/users',user)
 server.listen(app.get('port'),()=>{
     console.log('mi'+ app.get('title')+ ' esta en el puerto ' + app.get('port'))
 })
-
 app.use('/jquery',jq)
+
+let{PythonShell} = require('python-shell')
+
+PythonShell.run("app.py",null,function(err,results){
+    console.log(results)
+    console.log("python script finished")
+})
