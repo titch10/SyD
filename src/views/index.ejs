@@ -27,13 +27,20 @@
         
           </div>
           <div id="div-mostrar">
-            <a href="#" class="btn-mostrar"  onclick="mostrar()" >
-                <span id="span1"></span>
-                <span id="span2"></span>
-                <span id="span3"></span>
-                <span id="span4"></span>
-                OK
-            </a>
+           
+            <form action="/users/add" method="POST" enctype="multipart/form-data">
+     
+                <div >
+                    <input value="Publicar nota" type="submit" href="#" >
+                        
+                    
+                    <input value="" type="file" id="holi" name="image"
+                    rel="tooltip" data-placement="top" data-original-title="Upload a photo">
+                    <label for="holi"><i class="icon-camera shaded"></i></label>	
+                    
+                </div>
+            </form>
+
         </div>
         </center>
     </div>
