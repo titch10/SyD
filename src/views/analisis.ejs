@@ -48,7 +48,7 @@
           <a class="nav-link active" aria-current="page" href="#">Página principal</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Información</a>
+          <a class="nav-link" href="/users/informacion">Información </a>
         </li>
         
       </ul>
@@ -65,17 +65,10 @@
     </p>
 
   
-    <form action="/users/add" method="POST" enctype="multipart/form-data">
-     
-        <div >
            
-            <input class="btn btn-primary" value="" type="file" id="holi" name="image" rel="tooltip" data-placement="top" data-original-title="Upload a photo" style="opacity: 0;">
-            <label for="holi"><i class="btn btn-lg btn-primary">SUBIR FOTO</i></label>	
             
-            <input class="btn btn-lg btn-primary" value="Analizar" type="submit" href="#" >
-        </div>
-    </form>
-
+            
+    <a class="btn btn-primary" href="/" tabindex="-1" aria-disabled="true">Regresar</a>
   </div>
 
 </main>
@@ -83,7 +76,8 @@
 
 <main class="container">
     <div class="bg-light p-5 rounded" style="margin: 40px;">
-      <p class="lead">Información sobre el analisis.</p>
+      <p class="lead"><%= aux %></p> </p>
+      <a class="btn btn-primary" href="/users/informacion" tabindex="-1" aria-disabled="true">Mas informacion</a>
     </div>
   </main>
 
