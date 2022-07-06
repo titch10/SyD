@@ -10,7 +10,6 @@ const server = http.createServer(app)
 const fs=require('fs')
 const mediaserver=require('mediaserver')
 const multer = require('multer')
-
 const storage = multer.diskStorage({
   destination: path.join(__dirname, 'public/uploads'),
   filename: (req,file,cb)=>{
@@ -45,7 +44,3 @@ server.listen(app.get('port'),()=>{
     console.log('mi'+ app.get('title')+ ' esta en el puerto ' + app.get('port'))
 })
 app.use('/jquery',jq)
-
-
-
-

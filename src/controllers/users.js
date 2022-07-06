@@ -26,4 +26,25 @@ const getAnalisis= (req,res)=>{
    res.render('analisis',{aux});
 }
 
-module.exports= {getAnalisis,getUser, subirImagen,getInformacion}
+const getFrameTop=(req,res)=>{
+    res.render('Frametop');
+}
+const getFrameIzq=(req,res)=>{
+    res.render('FrameIzq');
+}
+const getIndice=(req,res)=>{
+    res.render('indice');
+}
+const getWelcome=(req,res)=>{
+    res.render('Bienvenida')
+}
+const getIntro=(req,res)=>{
+    res.render('intro')
+}
+const getObjetivo=(req,res)=>{
+    res.render('objetivo')
+}
+const getMetodologia=(req,res)=>{
+    res.render('Metodologia')
+}
+module.exports= {getAnalisis, getUser, subirImagen,getInformacion,getFrameTop,getFrameIzq,getIndice,getWelcome, getIntro,getObjetivo, getMetodologia}

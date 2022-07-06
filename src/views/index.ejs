@@ -1,95 +1,17 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.84.0">
-    <title>Fixed top navbar example · Bootstrap v5.0</title>
-
-
-    
-
-    <!-- Bootstrap core CSS -->
-<link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
-    
-    <!-- Custom styles for this template -->
-    <link href="navbar-top-fixed.css" rel="stylesheet">
-  </head>
-  <body>
-    
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Detector de plagas</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Página principal</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Información</a>
-        </li>
-        
-      </ul>
-      
-    </div>
-  </div>
-</nav>
-
-<main class="container">
-  <div class="bg-light p-5 rounded" style="margin: 40px;">
-    <h1>ANALIZADOR DE PLANTAS</h1>
-    <p class="lead">Este analizador de imagenes de plantas caracteriza las partículas en términos de tamaño, forma y transparencia. 
-        Para poder realizar este analisis es necesario que las imágenes sean estáticas. A continuacion sube tu imagen de tu planta y se arrojara un resultado que te dira si tu planta tiene plaga.
-    </p>
-
-  
-    <form action="/users/add" method="POST" enctype="multipart/form-data">
-     
-        <div >
-           
-            <input class="btn btn-primary" value="" type="file" id="holi" name="image" rel="tooltip" data-placement="top" data-original-title="Upload a photo" style="opacity: 0;">
-            <label for="holi"><i class="btn btn-lg btn-primary">SUBIR FOTO</i></label>	
-            
-            <input class="btn btn-lg btn-primary" value="Analizar" type="submit" href="#" >
-        </div>
-    </form>
-
-  </div>
-
-</main>
-
-
-<main class="container">
-    <div class="bg-light p-5 rounded" style="margin: 40px;">
-      <p class="lead">Información sobre el analisis.</p>
-    </div>
-  </main>
-
-
-    <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
-
-      
-  </body>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Polilibro</title>
+<%- include("partials/headers") -%>
+</head>
+<frameset rows="190,*" cols="*" framespacing="0" frameborder="no" border="0">
+  <frame src="/users/frametop" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
+  <frameset rows="*" cols="275,*" framespacing="0" frameborder="no" border="0">
+		<frame src="/users/frameizq" name="leftFrame" scrolling="Yes" noresize="noresize" id="leftFrame" title="leftFrame" />
+		<frame src="/users/welcome" name="mainFrame" id="mainFrame" title="mainFrame" />
+	</frameset>
+</frameset>
+<noframes><body>
+</body></noframes>
 </html>
