@@ -45,6 +45,27 @@ const getObjetivo=(req,res)=>{
     res.render('objetivo')
 }
 const getMetodologia=(req,res)=>{
-    res.render('Metodologia')
+    res.render('metodologia')
 }
-module.exports= {getAnalisis, getUser, subirImagen,getInformacion,getFrameTop,getFrameIzq,getIndice,getWelcome, getIntro,getObjetivo, getMetodologia}
+const getEvaluacion=(req,res)=>{
+    res.render('evaluacion')
+}
+const getPracticas=(req,res)=>{
+    res.render('practicas')
+}
+const getProyecto=(req,res)=>{
+    res.render('proyecto')
+}
+const getGlosario=(req,res)=>{
+    res.render('glosario')
+}
+const getUnidad1=(req,res)=>{
+    res.render('unidad1')
+}
+const getBibliografia=(req,res)=>{
+    res.render('bibliografia')
+}
+const getCreditos=(req,res)=>{
+    res.render('creditos')
+}
+module.exports= {getCreditos,getBibliografia,getGlosario,getUnidad1,getProyecto,getPracticas,getAnalisis, getUser, subirImagen,getInformacion,getFrameTop,getFrameIzq,getIndice,getWelcome, getIntro,getObjetivo, getMetodologia, getEvaluacion}
