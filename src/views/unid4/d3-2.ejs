@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<link type="text/css" href="/css/estilos.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2><strong>4.3.2 Tipos de apuntadores.</strong></h2>
+    <h3 align="right"><a href="/users/d3-1"><img src="/css/images/next2.jpg" width="50" height="50" alt="" /></a><a href="/users/d3-3"><img src="/css/images/next.jpg" width="50" height="50" alt="" /></a>&nbsp;&nbsp;</h3>
+    <div class="div-texto">
+        <p><strong> Apuntadores a apuntadores </strong></p>
+        <p> Dado que un apuntador es una variable que apunta a otra, fácilmente se puede deducir que pueden existir
+        apuntadores a apuntadores, y a su vez los segundos pueden apuntar a apuntadores, y así sucesivamente. Estos
+        cuatro apuntadores se declaran colocando tantos asteriscos ('*') como sea necesario. Ejemplo: <br><br>
+        <strong>Código C y C++</strong></p>
+    </div>
+        <div class="scroll">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+        char c = 'z';
+        char *pc = &#38;c;
+        char **ppc = &#38;pc;
+        char ***pppc = &#38;ppc;
+        ***pppc = 'm'; // Cambia el valor de c a 'm'
+         </code></pre></div>
+
+        <div class="div-texto">
+        <p><strong> Apuntadores constantes y apuntadores a constantes </strong></p>
+        <p>Es posible declarar apuntadores constantes. De esta manera, no se permite la modificación de la dirección
+        almacenada en el apuntador, pero sí se permite la modificación del valor al que apunta. Ejemplo: <br><br>
+        <strong> Código C y C++</strong></p>
+        </div>
+
+        <div class="scroll">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+        int x = 5, y = 7;
+        int *const p = &#38;x; // Declaración e inicialización del apuntador constante
+        *p = 3; // Esto es válido
+        p = &#38;y; // Esto no es válido (el compilador genera un error)
+        </code></pre></div>
+
+        <div class="div-texto">
+        <p>También es posible declarar apuntadores a datos constantes. Esto hace que no sea posible modificar el
+        valor al que apunta el apuntador. Ejemplo: <br><br>
+        <strong>Código C y C++</strong> </p>
+        </div>
+
+        <div class="scroll">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+        int x = 5, y = 7;
+        const int *p = &#38;x; // Declaración e inicialización del apuntador a constante
+        p = &#38;y; // Esto es válido
+        *p = 3; // Esto no es válido (el compilador genera un error)
+        y = 3; // Esto es válido
+        </code></pre></div>
+
+        <div class="div-texto">
+        <p><strong> Apuntadores, arreglos y aritmética de apuntadores.</strong>
+        Los arreglos y apuntadores están fuertemente relacionados. El nombre de un arreglo es simplemente
+        un apuntador constante al inicio del arreglo. Se pueden direccionar arreglos como si fueran apuntadores y
+        apuntadores como si fueran arreglos. Ejemplos: <br><br>
+        <strong> Código C y C++ </strong> </p>
+        </div>
+
+        <div class="scroll">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+        int lista_arr[5] = {10, 20, 30, 40, 50};
+        int *lista_ptr;
+        lista_ptr = lista_arr; // A partir de aquí ambas variables apuntan al mismo sitio
+        cout &lt;&lt; lista_arr[0]; // Imprime 10
+        cout &lt;&lt; lista_ptr[0]; // Instrucción equivalente a la anterior
+        cout &lt;&lt; *lista_arr; // Instrucción equivalente a la anterior
+        cout &lt;&lt; *lista_ptr; // Instrucción equivalente a la anterior
+        cout &lt;&lt; lista_arr[3]; // Imprime 40
+        cout &lt;&lt; lista_ptr[3]; // Instrucción equivalente a la anterior
+        </code></pre></div>
+
+        <div class="div-texto">
+        <p>Es posible sumar y restar valores enteros a un apuntador. El resultado de estas operaciones es el desplazamiento de la dirección de memoria hacia adelante (suma) o hacia atrás (resta) por bloques de bytes del
+        tamaño del tipo de dato apuntado por el apuntador. Esto permite recorrer arreglos utilizando apuntadores.
+        Ejemplos: <br><br>
+        <strong> Código C y C++ </strong></p>
+        </div>
+
+        <div class="scroll">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+        int lista[5] = {10, 20, 30, 40, 50};
+        int *p;
+        char cad[15];
+        char *q;
+        p = &lista[3]; // 'p' almacena la dirección de la posición 3 del arreglo
+        p = lista + 3; // Instrucción equivalente a la anterior
+        cout &lt;&lt; lista[2]; // Imprime 30;
+        cout &lt;&lt; *(lista+2); // Instrucción equivalente a la anterior
+        // Las siguientes instrucciones imprimen la palabra "Programando"
+        /* Nota: Recuérdese que una constante de cadena de caracteres es
+        una secuencia de caracteres en memoria seguidos del cáracter nulo */
+        strcpy(cad, "Programando");
+        for (q = cad; *q != '\0'; q++)
+        cout &lt;&lt; q;
+        </code></pre></div>
+
+        <div class="div-texto">
+        <p> También es posible restar dos apuntadores. El resultado de esta operación es el número de bloques de
+        bytes que hay entre las dos direcciones del tamaño del tipo de dato apuntado por los apuntadores. Ejemplo: <br><br>
+        <strong> Código C y C++</strong> </p>
+        </div>
+
+        <div class="scroll">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+        double x[5] = {1.1, 2.1, 3.1, 4.1, 5.1};
+        double *p = &x[1],
+        *q = &x[4];
+        int n;
+        n = q - p; // a 'n' se le asigna 3
+        </code></pre></div>
+
+        <div class="div-texto">
+            <p><strong> Apuntadores para paso de parámetros por referencia </strong></p>
+           <p>El lenguaje C no provee una manera de pasar parámetros por referencia. Sin embargo, es posible hacerlo a
+        través del uso de apuntadores. A continuación se muestra un ejemplo del paso de un parámetro por referencia
+        en C++, y luego un código equivalente en C o C++ utilizando un apuntador: <br><br>
+        <strong> Código C++ </strong> </p>
+        </div>
+
+        <div class="scroll">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+        void suma(int a, int b, int& r)
+        {
+        r = a + b;
+        }
+        void main()
+        {
+        int x;
+        suma(7, 5, x);
+        cout &lt;&lt; "7 + 5 = " &lt;&lt; x;
+        }
+        </code></pre>
+        </div>
+
+        <div class="div-texto">
+        <p><strong> Código C y C++ </strong></p>
+        </div>
+
+        <div class="scroll">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+        void suma(int a, int b, int *r)
+        {
+        *r = a + b;
+        }
+        void main()
+        {
+        int x;
+        suma(7, 5, &x);
+        cout &lt;&lt; "7 + 5 = " &lt;&lt; x;
+        }
+        </code></pre></div>
+
+        <div class="div-texto">
+        </p> Nótese que en ambos casos se utiliza el operador '&' para cosas distintas. El operador '&' tiene dos
+        significados como operador unario: señalación de parámetro por referencia y operador de referenciación. </p>
+        
+        <p><strong> Asignación dinámica de memoria.</strong></p>
+        
+        <p>Los programas pueden crear variables globales o locales. Las variables declaradas globales en sus programas
+        se almacenan en posiciones fijas de memoria, en la zona conocida como segmento de datos del programa,
+        y todas las funciones pueden utilizar estas variables. Las variables locales se almacenan en la pila (stack)
+        y existen sólo mientras están activas las funciones donde están declaradas. En ambos casos el espacio de
+        almacenamiento se reserva en el momento de la compilación del programa.</p>
+       <p>También es posible reservar y utilizar memoria dinámicamente, tomada de la zona de memoria llamada
+        montículo (heap) o almacén libre. En C están disponibles varias funciones que permiten realizar reservar y
+        librerar memoria, pero C++ además provee un método más fácil y seguro de hacerlo.</p>
+        
+       </div>
+    
+</body>
+</html>

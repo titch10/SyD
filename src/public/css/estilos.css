@@ -1,0 +1,169 @@
+body{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+h2{
+    text-align: center;
+    color: #742844;
+}
+p{
+    text-align: justify;
+    color: black;
+}
+.image{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+.nav-header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+}
+.header-text{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   height: 100px;
+   align-items: center;
+   color: whitesmoke;
+}
+#text{
+    text-align: justify;
+    color: black;
+}
+#logo-ipn{
+	width: 100px;
+	height:100px;
+	background-image:url("images/logo-ipn.png");
+	background-size: 100px 100px;
+}
+#logo-esime{
+	background-image:url("images/esime.png");
+	background-repeat: no-repeat;
+	width: 100px;
+	height: 100px;
+    
+}
+
+body::-webkit-scrollbar{
+   width: 7px;
+}
+body::-webkit-scrollbar-thumb{
+    background: rgb(206, 156, 31);
+    border-radius: 2px;
+}
+.see{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+   
+   align-items: center;
+   color: whitesmoke;
+}
+
+.div-img{
+    padding-right: 30px;
+    padding-left: 10px;
+}
+
+.div-texto{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+div.scroll {
+    width: 800px;
+    height: 150px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-left: 100px;
+  }
+  div.scroll-p {
+    width: 800px;
+    height: 350px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-left: 100px;
+  }
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #12562a;
+    color: white;
+  }
+
+
+
+  pre.prettyprint { display: block; background-color: rgb(71, 70, 71) }
+pre .nocode { background-color: none; color: #000 }
+pre .str { color: lime; font-style: italic; } /* string  - pink */
+pre .kwd { color: rgb(72, 152, 209); font-weight: bold }
+pre .com { color: rgba(255, 255, 255, 0.718) } /* comment - skyblue */
+pre .typ { color: #98fb98 } /* type    - lightgreen */
+pre .lit { color: magenta } /* literal - darkred */
+pre .pun { color: white }    /* punctuation */
+pre .pln { color: #fff }    /* plaintext */
+pre .tag { color: #f0e68c; font-weight: bold } /* html/xml tag    - lightyellow */
+pre .atn { color: #bdb76b; font-weight: bold } /* attribute name  - khaki */
+pre .atv { color: #ffa0a0 } /* attribute value - pink */
+pre .dec { color: #98fb98 } /* decimal         - lightgreen */
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0; color: rgba(255, 255, 255, 0.3) } /* IE indents via margin-left */
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: decimal }
+/* Alternate shading for lines */
+li.L1,li.L3,li.L5,li.L7,li.L9 { background-color: rgba(255, 255, 255, 0.1); }
+
+@media print {
+  pre.prettyprint { background-color: none }
+  pre .str, code .str { color: #060 }
+  pre .kwd, code .kwd { color: #006; font-weight: bold }
+  pre .com, code .com { color: #600; font-style: italic }
+  pre .typ, code .typ { color: #404; font-weight: bold }
+  pre .lit, code .lit { color: #044 }
+  pre .pun, code .pun { color: #440 }
+  pre .pln, code .pln { color: #000 }
+  pre .tag, code .tag { color: #006; font-weight: bold }
+  pre .atn, code .atn { color: #404 }
+  pre .atv, code .atv { color: #060 }
+}
+
+.practicas{
+    
+  
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+   
+   align-items: center;
+   color: whitesmoke;
+}
+.practicas-acceso{
+    width: 200px;
+    height: 200px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    
+    color: rgb(8, 7, 7);
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<link type="text/css" href="/css/estilos.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2><strong>Práctica 8. Sentencias de decisión.</strong></h2>
+    <h3 align="right"><a href="/users/p7"><img src="/css/images/next2.jpg" width="50" height="50" alt="" /></a><a href="/users/p9"><img src="/css/images/next.jpg" width="50" height="50" alt="" /></a>&nbsp;&nbsp;</h3>
+    <div class="div-texto">
+        <h3><strong>Objetivo Específico: Resolver alguna problematica usando sentencias de decisión.</strong></h3>
+           <p> Para las sentencias de decisión como por ejemplo 'if'  es necesario establecer una condición de salida en la que se cumpla el ciclo de 
+            decisiones. Posteriormente se usa 'else if' si es que hay otras condiciones de salida y por último 'else' para dar la salida definitiva 
+            al ciclo si es que las anteriores condiciones no se cumplieron.</p>
+            <p>En el siguiente ejemplo se muestra como aplicar estas sentencias a un problema:</p> 
+    </div>
+    <div class="scroll-p">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+  #include &lt;iostream.h&gt;
+  using namespace std;
+
+  void decision(char);
+
+  int main(void)
+  {
+    //Hacer un programa que permita al usuario seleccionar un color de cinco disponibles.
+    
+    char color;
+    cout&lt;&lt;"Seleccione un color: ";
+    cout&lt;&lt;"\n\nA: amarillo \nB: azul \nC: rojo \nD: blanco \nE: verde\n ";
+    cout&lt;&lt;"color: ";
+    cin&gt;&gt;color;    
+    decision(color);   //funcion que lee la decision.
+    return 0;
+  }
+  void decision(char x)
+  {
+    if(x=='A' || x=='a'){
+       cout&lt;&lt;"Has seleccionado el color amarillo.";
+    }else if(x=='B' || x=='b'){
+       cout&lt;&lt;"Has seleccionado el color azul.";
+    }else if(x=='C' || x=='c'){
+       cout&lt;&lt;"Has seleccionado el color rojo.";
+    }else if(x=='D' || x=='d'){
+       cout&lt;&lt;"Has seleccionado el color blanco.";
+    }else if(x=='E' || x=='e'){
+       cout&lt;&lt;"Has seleccionado el color verde.";
+    }else{
+        cout&lt;&lt;"No has seleccionado ningun color.";
+    }
+  }
+  </code></pre></div>
+  <div class="div-texto">
+     <p>Como se puede observar, con las sentencias de decisión podemos hacer que el usuario seleccione una opción o llevar al algoritmo a una solución en concreto.</p>
+     <p>La siguiente captura es el resultado en consola del ejemplo mostrado:</p>
+     <div class="image"><img src="/css/images/salida5.jpg" width="500" height="300"/></div>
+  </div>
+</body>
+</html>

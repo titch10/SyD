@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<link type="text/css" href="/css/estilos.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2><strong>Práctica 10. Sentencias de control.</strong></h2>
+    <h3 align="right"><a href="/users/p9"><img src="/css/images/next2.jpg" width="50" height="50" alt="" /></a><a href="/users/p11"><img src="/css/images/next.jpg" width="50" height="50" alt="" /></a>&nbsp;&nbsp;</h3>
+    <div class="div-texto">
+       <p>Las sentencias de control determinan el flujo de un programa, hasta ahora hemos visto seleccion, iteración y ahora cómo manejar bucles, es decir 
+        ocupar sentencias do-while y también otra sentencia de selección como switch que permite etiquetar resultados de una variable.</p>
+        <p> Aquí se muestra un ejemplo de cómo usar la sentencia de bucle do-while y la sentencia de selección switch para la creación de una calculadora.
+       </p>
+    </div>
+    <div class="scroll-p">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+  #include &lt;iostream.h&gt;
+  using namespace std;
+
+  int main(void)
+  {
+    //Calculadora de operaciones básicas.
+    int opc;
+    float x,y;
+    do{
+         cout&lt;&lt;"\n\n Que operacion quieres hacer?"&lt;&lt;"\n1.-suma"&lt;&lt;"\n2.-resta"&lt;&lt;"\n3.-multiplicacion"&lt;&lt;"\n4.-division"&lt;&lt;"\n5.-Potencia"&lt;&lt;"\n6.- Salida\n";
+         cin>>opc;
+         cout&lt;&lt;"Dame un numero: ";
+         cin&gt;&gt;>x;
+         cout&lt;&lt;"Dame otro numero: ";
+         cin&gt;&gt;y;
+         switch (opc)
+         {
+         case 1:
+            cout&lt;&lt;"\n"&lt;&lt;x&lt;&lt;"+"&lt;&lt;y&lt;&lt;"="&lt;&lt;x+y;
+         break;
+         case 2:
+            cout&lt;&lt;"\n"&lt;&lt;x&lt;&lt;"-"&lt;&lt;y&lt;&lt;"="&lt;&lt;x-y;
+         break;
+         case 3:
+            cout&lt;&lt;"\n"&lt;&lt;x&lt;&lt;"*"&lt;&lt;y&lt;&lt;"="&lt;&lt;x*y;
+         break;
+         case 4:
+            cout&lt;&lt;"\n"&lt;&lt;x&lt;&lt;"/"&lt;&lt;y&lt;&lt;"="&lt;&lt;x/y;
+         break;
+         case 5:
+            cout&lt;&lt;"\n"&lt;&lt;x&lt;&lt;"^"&lt;&lt;y&lt;&lt;"="&lt;&lt;pow(x,y);
+         break;
+         case 6:
+            cout&lt;&lt;"\n Programa terminado";
+         break;
+         default:
+           cout&lt;&lt;"\nNo existe esa opcion";
+         break;
+         }
+    }while (opc!=6);
+    return 0;
+  }
+  </code></pre></div>
+  <div class="div-texto">
+      <p>En el ejemplo se puede ver que el ciclo do while nos permite repetir el código hasta que se 
+        cumpla una condición de salida, por otro lado, la estructura de decisión witch nos permite etiquetar posibles 
+        respuestas que de un usuario. Estas estructuras se pueden aplicar a más problemáticas como menús para llenar una agenda.</p>
+
+        <p>Aquí se muestra una captura de pantalla del resultado en consola para este ejemplo:</p>
+        <div class="image"><img src="/css/images/salida7.jpg" width="250" height="400"/></div>
+  </div>
+</body>
+</html>

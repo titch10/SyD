@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<link type="text/css" href="/css/estilos.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2><strong>4.3.4 Relación de apuntadores con arreglos.</strong></h2>
+    <h3 align="right"><a href="/users/d3-3"><img src="/css/images/next2.jpg" width="50" height="50" alt="" /></a><a href="/users/unidad5"><img src="/css/images/next.jpg" width="50" height="50" alt="" /></a>&nbsp;&nbsp;</h3>
+    <div class="div-texto">
+
+        <p> Para asignar memoria dinámicamente en C++ se utilizan los operadores new y delete. El operador new
+        reserva memoria para un tipo de datos específico y retorna su dirección, o retorna NULL en caso de no haber
+        conseguido suficiente memoria; y el operador delete permite liberar la memoria reservada a través de un
+        apuntador. La sintaxis de ambos operadores es como sigue: </p>
+        
+        <p>Para reservar y liberar un solo bloque: </p> </div>
+        <div class="scroll">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+        &lt;apuntador&gt; = new &lt;tipo de dato&gt;
+        delete &lt;apuntador&gt;
+        Para reservar y liberar varios bloques (un arreglo):
+        &lt;apuntador&gt; = new &lt;tipo de dato&gt;[&lt;número de bloques&gt;]
+        delete [] &lt;apuntador&gt;
+        </code></pre></div>
+
+        <div class="div-texto">
+        <p>El tipo del apuntador especificado del lado izquierdo del operador new debe coincidir con el tipo especificado del lado derecho. 
+        De no ser así, se produce un error de compilación. Ejemplos:</p>
+        </div>
+        <div class="scroll">
+            <pre class="prettyprint linenums:1"><code class="language-c">
+        Código C++
+        struct Data
+        {
+        char nombre[20];
+        int edad;
+        };
+        Data *p_data; // Declaración de un apuntador a Data
+        int i;
+        p_data = new Data; // Reservación de memoria para un registro
+        if (p_data != NULL) // Verificación de reservación
+        {
+        strcpy(p_data->nombre, "Rachel"); // Inicialización de datos
+        p_data->edad = 21; // en la memoria reservada
+        delete p_data; // Liberación de memoria
+        }
+        // Reservación de memoria para un arreglo de 10 registros
+        p_data = new Data[10];
+        if (p_data != NULL) // Verificación de reservación
+        {
+        // Lectura de datos del arreglo
+        for (i = 0; i &lt; 10; i++)
+        cin &gt;&gt; p_data[i].nombre &gt;&gt; p_data[i].edad;
+        // Liberación de memoria del arreglo
+        delete [] p_data;
+        </code></pre></div>
+</body>
+</html>

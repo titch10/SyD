@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<link type="text/css" href="/css/estilos.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2><strong>Práctica 6. Funciones matemáticas.</strong></h2>
+    <h3 align="right"><a href="/users/p5"><img src="/css/images/next2.jpg" width="50" height="50" alt="" /></a><a href="/users/p7"><img src="/css/images/next.jpg" width="50" height="50" alt="" /></a>&nbsp;&nbsp;</h3>
+    <div class="div-texto">
+        <h3><strong>Objetivo Específico: Implementar la librería math.h para funciones matemáticas.</strong></h3>
+        
+        <p>Para realizar operaciones del tipo trigonométricas y de valor absoluto se requiere de la librería math.h, ya que esta librería nos brinda
+           funciones para realizar operaciones trigonométricas , valor absoluto, potencias y la coma flotante. 
+        </p>
+        <p>En el siguiente ejemplo se muestra cómo hacer uso de estas funciones matemáticas básicas.</p>
+    </div>
+    <div class="scroll-p">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+    # include &lt;iostream.h&gt;
+    # include &lt;math.h&gt;
+    using namespace std;
+    int main(void)
+    {
+        //Calcular función coseno, seno, tangente, valor absoluto, potencia y raíz cuadrada de un número. 
+        
+        float x;   // creamos un dato de tipo flotante.
+        cout&lt;&lt;"\nIngresa un numero: ";
+        cin&gt;&gt;x;       //se lee el dato tipo flotante. 
+   
+       //función coseno
+       cout&lt;&lt;"\ncos("&lt;&lt;x&lt;&lt;")"&lt;&lt;"="&lt;&lt;cos(x);
+       //función seno
+       cout&lt;&lt;"\nsen("&lt;&lt;x&lt;&lt;")"&lt;&lt;"="&lt;&lt;sin(x);
+       //función tangente
+       cout&lt;&lt;"\ntan("&lt;&lt;x&lt;&lt;")"&lt;&lt;"="&lt;&lt;tan(x);
+       //función valor absoluto
+       cout&lt;&lt;"\nabs("&lt;&lt;x&lt;&lt;")"&lt;&lt;"="&lt;abs(x);
+       //función potencia
+       cout&lt;&lt;"\n("&lt;&lt;x&lt;&lt;")^"&lt;&lt;x&lt;&lt;"="&lt;&lt;pow(x,x);
+       //función raíz cuadrada
+       cout&lt;&lt;"\nsqrt("&lt;&lt;x&lt;&lt;")"&lt;&lt;"="&lt;&lt;sqrt(x);
+       
+       return 0;
+   }
+
+
+    }
+        </code></pre></div>
+        <div class="div-texto">
+            <p>Las funciones vistas son las más usadas en el curso sin embargo, iremos viendo otras en prácticas posteriores.
+                 El resultado por consola obtenido es el siguiente:</p>
+            <div class="image"><img src="/css/images/salida3.jpg" width="500" height="300"/></div>
+        </div>
+</body>
+</html>

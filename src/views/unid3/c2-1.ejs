@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<link type="text/css" href="/css/estilos.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2><strong>3.2.1 Pre y Post condicional.</strong></h2>
+    <h3 align="right"><a href="/users/c2"><img src="/css/images/next2.jpg" width="50" height="50" alt="" /></a><a href="/users/c2-2"><img src="/css/images/next.jpg" width="50" height="50" alt="" /></a>&nbsp;&nbsp;</h3>
+    <div class="div-texto">
+        <p><strong>PRE incremento.</strong></p>
+        <p>Para comprender cómo sirve el Pre y el Post incremento primero veamos el siguiente código:</p>
+    </div>
+    <div class="scroll">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+        # include &lt;iostream.h&gt;
+        int main(void){
+            int i=1, j;
+
+            j= ++i;
+        }
+        </code></pre></div>
+        <div class="div-texto">
+            <p> En el ejemplo vemos que j va a tomar el valor de i pero con un pre incremento, el pre incremento hace que el valor aumente en 1 unidad antes de ser guardado en una variable. 
+                <br><br> Por lo tanto el valor de j será : <strong>   J = 2 </strong>
+                 </p>
+
+                 <p><strong>POST incremento.</strong></p>
+                 <p>En el Post incremento la adición se coloca despues de la variable. Veamos un ejemplo:</p>
+        </div>
+        <div class="scroll">
+            <pre class="prettyprint linenums:1"><code class="language-c">
+            # include &lt;iostream.h&gt;
+            int main(void){
+                int i=1, j;
+    
+                j= i ++;
+            }
+            </code></pre></div>
+
+            <div class="div-texto">
+                <p> Al hacer el incremento '++' despues de la variable le estamos indicando que una vez que iguale la variable i a j se le sume 1 unidad a i.
+                    <br><br> Por lo tanto el valor de j será : <strong>   J = 1 </strong>
+                     </p>
+    
+            </div>
+
+
+</body>
+</html>

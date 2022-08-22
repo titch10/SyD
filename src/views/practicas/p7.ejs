@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<link type="text/css" href="/css/estilos.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2><strong>Práctica 7. Funciones de usuario.</strong></h2>
+    <h3 align="right"><a href="/users/p6"><img src="/css/images/next2.jpg" width="50" height="50" alt="" /></a><a href="/users/p8"><img src="/css/images/next.jpg" width="50" height="50" alt="" /></a>&nbsp;&nbsp;</h3>
+    <div class="div-texto">
+        <h3><strong>Objetivo Específico: Usar funciones de usuario en algun proceso dentro del programa.</strong></h3>
+        <p>Las funciones permiten retornar un valor a la funcion principal de un programa, este pase de parámetros se hace a través de dos metodos conocidos como pase por valor o por referencia.
+            En el siguiente ejemplo se muestra ambos casos: </p>
+      
+    </div>
+    <div class="scroll-p">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+  # include &lt;iostream.h&gt;
+  # include &lt;math.h&gt;
+  using namespace std;
+
+  void suma(int,int,int&);
+  int resta(int,int);
+
+  int main(void)
+  {
+    //Hacer un programa que sume 2 números y regrese el resultado por referencia, 
+    //luego otra que reste 2 números y regrese un parámetro.
+    
+    int x, y, r1,r2;
+    cout&lt;&lt;"Ingresa el primer numero: ";
+    cin>>x;
+    cout&lt;&lt;"Ingresa el segundo numero: ";
+    cin>>y;
+
+    suma(x,y,r1);    //se manda a llamar la función suma
+    r2=resta(x,y);    //se manda a llamar la función resta
+
+    cout&lt;&lt;"\nEl resultado de la suma es: "&lt;&lt;r1;
+    cout&lt;&lt;"\nEl resultado de la resta es: "&lt;&lt;r2;
+    return 0;
+  }
+  void suma(int x, int y, int& r){
+    r=x+y;
+  }
+  int resta(int x, int y){
+     int r;
+     r=x-y;
+     return r;
+  }
+
+        </code></pre></div>
+
+ <div class="div-texto">
+     <p>En el ejemplo, el símbolo '&' en la función suma indica que le estamos pasando la dirección de una variable a esa funcion, así toda modificacion que se haga a esa variable dentro de la función se guardara en la variable original.
+     </p>
+     <p>La siguiente captura es el resultado en consola del ejemplo mostrado:</p>
+     <div class="image"><img src="/css/images/salida4.jpg" width="500" height="300"/></div>
+ </div>
+</body>
+</html>

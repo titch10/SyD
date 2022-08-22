@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<link type="text/css" href="/css/estilos.css" rel="stylesheet">
+</head>
+
+<body>
+   <h2><strong>2.3.1 Funciones de entrada y salida.</strong></h2>
+   <h3 align="right"><a href="/users/b3"><img src="/css/images/next2.jpg" width="50" height="50" alt="" /></a><a href="/users/b3-2"><img src="/css/images/next.jpg" width="50" height="50" alt="" /></a>&nbsp;&nbsp;</h3>
+    <div class="div-texto">
+
+        <p>Cuando decimos Input, significa introducir algunos datos en un programa. Una entrada se puede dar en forma de archivo o 
+        desde la línea de comando. La programación en C proporciona un conjunto de funciones integradas para leer la entrada dada 
+        y alimentarla al programa según los requisitos.</p>
+        
+        <p><strong> Los archivos estándar </strong></p>
+        <p>La programación en C trata todos los dispositivos como archivos. Por lo tanto, los dispositivos como la pantalla se 
+        direccionan de la misma manera que los archivos y los siguientes tres archivos se abren automáticamente cuando se 
+        ejecuta un programa para proporcionar acceso al teclado y la pantalla.</p>
+        
+        <p>Los punteros de archivo son los medios para acceder al archivo con fines de lectura y escritura. 
+        Esta sección explica cómo leer los valores de la pantalla y cómo imprimir el resultado en la pantalla.</p>
+        
+        <p><strong> Las funciones getchar () y putchar () </strong></p>
+        <p>los int getchar(void)La función lee el siguiente carácter disponible de la pantalla y lo devuelve como un número entero. 
+        Esta función lee solo un carácter a la vez. Puede utilizar este método en el bucle en caso de que desee leer más de un 
+        carácter de la pantalla.</p>
+
+       <p> los int putchar(int c)La función pone el carácter pasado en la pantalla y devuelve el mismo carácter. 
+        Esta función coloca solo un carácter a la vez. Puede utilizar este método en el bucle en caso de que desee 
+        mostrar más de un carácter en la pantalla. Compruebe el siguiente ejemplo:</p>
+        
+        
+  
+    </div>
+    <div class="scroll">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+        #include &lt;stdio.h&gt;
+        int main( )
+        {
+            int c;
+            printf( "Ingresa un valor :");
+            c = getchar( );
+            printf( "\nValor intresado: ");
+            putchar( c );
+            return 0;
+        }
+        </code></pre>
+    </div>
+
+    <p>Las funciones scanf () y printf () los int scanf, La función lee la entrada del flujo de entrada estándar. 
+    stdin y escanea esa entrada de acuerdo con format previsto.</p>
+    
+    <p>Los int printf, La función escribe la salida en el flujo de salida estándar. 
+    stdout y produce la salida de acuerdo con el formato proporcionado.</p>
+    
+    <p>Los formatpuede ser una cadena constante simple, pero puede especificar% s,% d,% c,% f, etc., 
+    para imprimir o leer cadenas, enteros, caracteres o flotantes respectivamente. 
+    Hay muchas otras opciones de formato disponibles que se pueden utilizar según los requisitos. 
+    Ejemplo:</p>
+
+    <div class="scroll">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+        #include &lt;stdio.h&gt;
+        int main( ) 
+        {   
+            char str[100];
+            int i;
+            printf( "Ingresa un valor :");
+            scanf("%s %d", str, &i);
+            printf( "\nIngresaste: %s %d ", str, i);
+            return 0;
+        }
+        </code></pre>
+    </div>
+
+ <br><br><br>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<link type="text/css" href="/css/estilos.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2><strong>Práctica 11. Arreglos unidimensionales.</strong></h2>
+    <h3 align="right"><a href="/users/p10"><img src="/css/images/next2.jpg" width="50" height="50" alt="" /></a><a href="/users/p12"><img src="/css/images/next.jpg" width="50" height="50" alt="" /></a>&nbsp;&nbsp;</h3>
+    <div class="div-texto">
+        <h3><strong>Objetivo Específico: Usar un arreglo unidimensional para llevar acabo un proceso del programa.</strong></h3>  
+        <p>Como se mencionó en la teoría los arreglos nos sirven para crear variables que pueden alojar un numero finito de 
+            variables del mismo tipo. Para ejemplificar mejor cómo sería un arreglo imaginemos una estantería de zapatos, 
+            la estantería sería una variable y contendría un espacio para cada zapato.
+            <div class="image"><img src="/css/images/zapatos.jpg" width="350" height="200"/></div>
+        </p>
+        <p>Cada espacio en la estantería tiene un espacio definido por un número, en el caso de los arreglos unidimensionales es lo mismo y podremos acceder a esos espacios
+            usando corchetes y el espacio al que queremos acceder, por ejemplo, el primer dato lo obtendríamos de esta forma '[0]'.
+        </p>
+        <p> A continuación veremos un ejemplo de cómo usar arreglos unidimensionales.</p>   
+    </div>
+    <div class="scroll-p">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+  #include &lt;iostream.h&gt;
+  using namespace std;
+  
+  void leerArreglo();    //función para leer arreglo.    
+  int suma(int arreglo[],int);     //función para sumar elementos del arreglo.
+  
+  int arreglo[100],elementos;  // se crean variables globales.
+                               //la variable elementos es el número de datos que van a ser almacenados.
+  int main(void)
+  {
+    //Programa para sumar los elementos de un arreglo.
+    leerArreglo();
+    cout&lt;&lt;"Resultado de sumatoria: "&lt;&lt;suma(arreglo,elementos);
+    return 0;
+  }
+  void leerArreglo(){
+    cout&lt;&lt;"Dame el numero de elementos que quieres sumar: ";
+    cin&gt;&gt;elementos;
+    for(int i=0;i&lt;elementos;i++)
+    {
+       cout&lt;&lt;i+1&lt;&lt;".- elemento: ";   
+       cin>>arreglo[i];          //se lee el arreglo con un ciclo for para recorrerlo.
+    }
+  }
+  int suma(int arreglo[],int elementos){
+    int sumatoria=0;
+    for(int i=0;i&lt;elementos;i++){
+      sumatoria+=arreglo[i];
+    }
+    return sumatoria;    //devuelve el resultado de la sumatoria.
+  }
+  </code></pre></div>
+  <div class="div-texto">
+    <p> En el ejemplo visto se puede observar, que a través de dos funciones se lee el arreglo y se suma, 
+    esto con el objetivo de ahorrar código si es que se requiere sumar más arreglos en lugar de uno solo.</p>
+    <p>En la siguiente imagen se muestra el resultado en consola del ejemplo: </p>
+    <div class="image"><img src="/css/images/salida8.jpg" width="450" height="200"/></div>
+  </div>
+</body>
+</html>

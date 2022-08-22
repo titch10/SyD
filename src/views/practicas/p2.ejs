@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link type="text/css" href="/css/estilos.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2><strong>Práctica 2. Sistemas operativos.</strong></h2>
+    <h3 align="right"><a href="/users/p1"><img src="/css/images/next2.jpg" width="50" height="50" alt="" /></a><a href="/users/p3"><img src="/css/images/next.jpg" width="50" height="50" alt="" /></a>&nbsp;&nbsp;</h3>
+    <div class="div-texto">
+        <h3><strong>Objetivo Específico: Identificar los elementos fundamentales del 
+            código fuente para los módulos o subsistemas del núcleo que integran un Sistema Operativo.
+         </strong></h3>
+         <p> Hay casi 300 comandos para Windows y su predecesor, MS-DOS. A lo largo de las décadas, algunos comandos se han mantenido, 
+         algunos solo se han agregado recientemente con versiones más nuevas de Windows y otros se han eliminado o reemplazado. 
+         En nuestra lista completa, explicamos qué significan los diferentes comandos y en qué versiones de Windows se ejecutan. De esta 
+         manera, puede buscar rápidamente si los comandos CMD que conoce aún funcionan con Windows 10. Para que quede más claro,
+          hemos listado los conceptos básicos de los comandos del símbolo del sistema de Windows. </p><br><br>
+
+          
+        <table id="customers">
+            <tr>
+                <th>Comando CMD</th>
+                <th>Descripción</th>
+                <th>Versión Windows</th>
+            </tr>
+            <tr>
+                <td>bitsadmin</td>
+                <td>Crea y supervisa descargas y cargas.</td>
+                <td>10/8/7/Vista</td>
+            </tr>
+            <tr>
+                <td>break</td>
+                <td>Interrumpe Ctrl + C registrando dos, lo que le permite detener procesos en el sistema operativo anterior. Solo disponible por motivos de compatibilidad en Windows.</td>
+                <td>All Win/DOS</td>
+            </tr>
+            <tr>
+                <td>call</td>
+                <td>Llama a un archivo por lotes dentro de otro archivo por lotes. El comando no tiene ningún efecto si se introduce directamente en CMD en lugar de en un archivo por lotes.</td>
+                <td>All Win/DOS</td>
+            </tr>
+            <tr>
+                <td>cd</td>
+                <td>Muestra el directorio actual y le permite cambiar a otros directorios. Con el parámetro /D más la especificación de unidad y ruta, también puede cambiar de unidad. Utilice cd.. para cambiar a un directorio superior (tiene la misma función que el comando chdir).</td>
+                <td>All Win/DOS</td>
+            </tr>
+            <tr>
+                <td>chcp</td>
+                <td>Cambia la página de códigos actual (tabla de juego de caracteres) o muestra el recuento de páginas de la página de códigos actual.</td>
+                <td>All Win/DOS</td>
+            </tr>
+            <tr>
+                <td>chdir</td>
+                <td>Muestra el directorio actual y le permite cambiar a otros directorios. Con el parámetro /D más la especificación de unidad y ruta, también puede cambiar de unidad. Utilice chdir.. para cambiar a un directorio superior (tiene la misma función que el comando cd).</td>
+                <td>All Win/DOS</td>
+            </tr>
+             <tr>
+                <td>choice</td>
+                <td>Crea una lista de selección: ejemplo típico es la selección de sí (Y) o no (N), que se crea con /C YN. Con el parámetro /M puede agregar un mensaje explicativo para el usuario.</td>
+                <td>All Win (not XP)/DOS</td>
+             </tr>
+             <tr>
+                <td>clip</td>
+                <td>Reenvía el resultado de un comando al portapapeles. Por ejemplo, puede copiar la estructura de directorios.</td>
+                <td>10/8/7/Vista</td>
+             </tr>
+             <tr>
+                <td>cls</td>
+                <td>Borra el contenido de la pantalla.</td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>cmd</td>
+                <td>Inicia CMD.EXE.</td>
+                <td>10/8/7/Vista/XP</td>
+             </tr>
+             <tr>
+                <td>color</td>
+                <td>Cambia el fondo (primer valor) y el color del texto (segundo valor) del símbolo del sistema. El color se encuentra entre 0 (negro) y F (blanco).</td>
+                <td>10/8/7/Vista/XP</td>
+             </tr>
+             <tr>
+                <td>command</td>
+                <td>Comienza CMD.COM.</td>
+                <td>32-bit/DOS</td>
+             </tr>
+             <tr>
+                <td>date</td>
+                <td>Muestra la fecha actual y le permite cambiarla. Con el parámetro /T se muestra la fecha sin la opción de cambiar.</td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>debug</td>
+                <td>Inicia debug, un programa que puede probar y modificar programas dentro del símbolo del sistema.</td>
+                <td>32-bit/DOS</td>
+             </tr>
+             <tr>
+                <td>dir</td>
+                <td>Muestra todas las carpetas y archivos del directorio actual. Puede restringir la salida por atributos (/A), simplificar la lista (/B) o mostrar todos los subdirectorios y sus archivos (/S).</td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>doskey</td>
+                <td>Crea macros, recupera comandos y edita la entrada de comandos.</td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>dosshell</td>
+                <td>Abre el shell de DOS, una herramienta gráfica de administración de archivos. En Windows, el shell de DOS se reemplaza por el Explorador de Windows.</td>
+                <td>95/DOS</td>
+             </tr>
+             <tr>
+                <td>echo</td>
+                <td>Muestra un mensaje y se utiliza principalmente en scripts y archivos por lotes.</td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>edit</td>
+                <td>Inicia el editor de MS-DOS, con el que puede crear archivos de texto.</td>
+                <td>32-bit/DOS</td>
+             </tr>
+             <tr>
+                <td>edlin</td>
+                <td>Crea y edita archivos de texto en el símbolo del sistema.</td>
+                <td>32-bit/DOS</td>
+             </tr>
+             <tr>
+                <td>exit</td>
+                <td>Termina CMD.EXE o CMD.COM.</td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>fasthelp</td>
+                <td>Muestra información útil sobre los comandos.</td>
+                <td>DOS</td>
+             </tr>
+             <tr>
+                <td>fastopen</td>
+                <td>Escribe la posición de un programa en una lista especificada, que está en la memoria de trabajo y debería acelerar el inicio de los programas.</td>
+                <td>32-bit/DOS</td>
+             </tr>
+             <tr>
+                <td>find</td>
+                <td>Busca a través de un archivo o varios archivos una secuencia de caracteres en particular. Si solo desea saber con qué frecuencia se produce la palabra o frase, use el parámetro /C. Con la extensión /I el comando ignora las mayúsculas y minúsculas en la búsqueda.</td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>findstr</td>
+                <td>Busca secuencias de caracteres en uno o varios archivos. Le brinda más opciones en comparación con el comando find: puede buscar archivos que contengan varios términos o con /C buscar un orden de palabras exacto.</td>
+                <td>10/8/7/Vista/XP</td>
+             </tr>
+             <tr>
+                <td>forcedos</td>
+                <td>Inicia un programa en el sistema parcial de MS-DOS, en caso de que Windows XP no lo reconozca directamente como un programa de DOS.</td>
+                <td>XP (32-bit)</td>
+             </tr>
+             <tr>
+                <td>graftabl</td>
+                <td>Habilita la opción de usar caracteres extendidos de una página de códigos específica en modo gráfico.</td>
+                <td>32-bit/DOS</td>
+             </tr>
+             <tr>
+                <td>graphics</td>
+                <td>Inicia un programa que puede imprimir gráficos.</td>
+                <td>32-bit/DOS</td>
+             </tr>
+             <tr>
+                <td>help</td>
+                <td>Muestra texto de ayuda para un comando específico (también puede usar el comando /?).</td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>kb16</td>
+                <td>Cambia la configuración de país del teclado para los programas de DOS (solo incluido en Windows por razones de compatibilidad. Reemplaza la antigua tecla de comando).</td>
+                <td>32-bit</td>
+             </tr>
+             <tr>
+                <td>keyb</td>
+                <td>Cambia la configuración de país del teclado para los programas de DOS (solo incluido en Windows por razones de compatibilidad. Reemplazado por kb16 en las versiones más recientes de Windows).</td>
+                <td>98/95/DOS</td>
+             </tr>
+             <tr>
+                <td>logoff</td>
+                <td>Cierra la sesión del usuario fuera de Windows. También le permite finalizar sesiones en servidores.</td>
+                <td>10/8/7/Vista/XP</td>
+             </tr>
+             <tr>
+                <td>lpq</td>
+                <td>Muestra el estado de una cola de impresoras para equipos que utilizan un "demonio de impresora de línea" (LPD). (Para usar el comando en Windows 10, 8, 7 o Vista, primero deben habilitarse el servicio de impresión LPD y el monitor de puerto LPR).</td>
+                <td>All Win</td>
+             </tr>
+             <tr>
+                <td>lpr</td>
+                <td>Envía un archivo a un equipo que utiliza un demonio de impresora de línea (LPD). Para usar el comando en Windows 10, 8, 7 o Vista, primero se deben habilitar el servicio de impresión LPD y el monitor de puerto LPR.</td>
+                <td></td>
+             </tr>
+             <tr>
+                <td>md</td>
+                <td>Crea un nuevo directorio en la ruta de acceso especificada. Si los directorios aún no existen en la ruta, md los crea automáticamente (también puede usar el comando mkdir).</td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>mkdir</td>
+                <td>Crea un nuevo directorio en la ruta de acceso especificada. Si los directorios aún no existen en la ruta, mkdir los crea automáticamente (también puede usar el comando md).
+                </td>
+                <td></td>
+             </tr>
+             <tr>
+                <td>more</td>
+                <td>Genera el contenido de un archivo (por ejemplo, un archivo de texto) por la página. También puede utilizar el comando para dividir la salida de otro comando en páginas.
+                </td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>msg</td>
+                <td>Envía un mensaje a otro usuario. Puede escribir el nombre de usuario en el comando o crear archivos en los que se guarden los nombres de usuario. Los archivos se pueden incluir en el comando con @filename.
+                </td>
+                <td>10/8/7/Vista/XP</td>
+             </tr>
+             <tr>
+                <td>nlsfunc</td>
+                <td>Proporciona información específica del país para el soporte de idiomas.
+                </td>
+                <td>32-bit/DOS</td>
+             </tr>
+             <tr>
+                <td>ntbackup</td>
+                <td>Ejecuta servicios de copia de seguridad directamente desde la línea de comandos o como parte de archivos por lotes o script.
+                </td>
+                <td>XP</td>
+             </tr>
+             <tr>
+                <td>path</td>
+                <td>Crea y muestra la ruta de acceso para buscar archivos ejecutables.
+                </td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>pause</td>
+                <td>Pausa la ejecución en archivos por lotes y scripts. A continuación, se solicita al usuario en un mensaje que continúe presionando una tecla.
+                </td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>popd</td>
+                <td>Cambios en la carpeta guardada por el comando pushd. El comando es principalmente parte de archivos por lotes y scripts.
+                </td>
+                <td>10/8/7/Vista</td>
+             </tr>
+             <tr>
+                <td>print</td>
+                <td>Imprime un archivo de texto. Se debe especificar el dispositivo que se utilizará para la impresión.
+                </td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>prompt</td>
+                <td>Cambia la visualización del símbolo del sistema.
+                </td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>pushd</td>
+                <td>Guarda una ruta de acceso específica en un script o archivo por lotes. Puede cambiar a este directorio con popd.
+                </td>
+                <td>10/8/7/Vista/XP</td>
+             </tr>
+             <tr>
+                <td>qbasic</td>
+                <td>Inicia qbasic, un entorno de programa basado en el lenguaje de programación BASIC.
+                </td>
+                <td>98/95/DOS</td>
+             </tr>
+             <tr>
+                <td>rd</td>
+                <td>Elimina un directorio. Esto no debe contener ningún archivo, ni siquiera los ocultos. Puede eliminar un árbol de directorios completo con el parámetro /S (también puede usar el comando rmdir).
+                </td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>rem</td>
+                <td>Escribe comentarios en archivos por lotes y scripts que no se tienen en cuenta al ejecutar.
+                </td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>rmdir</td>
+                <td>Elimina un directorio. Esto no debe contener ningún archivo, ni siquiera los ocultos. Puede eliminar un árbol de directorios completo con el parámetro /S (también puede usar el comando rd).
+                </td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>runas</td>
+                <td>Permite a un usuario ejecutar comandos con los derechos de otro usuario. Por ejemplo, puede ejecutar un comando como administrador desde una cuenta de usuario normal siempre que conozca la contraseña.
+                </td>
+                <td>10/8/7/Vista/XP</td>
+             </tr>
+             <tr>
+                <td>scandisk</td>
+                <td>Inicia Microsoft ScanDisk. El programa busca errores en los soportes de datos.
+                </td>
+                <td>98/95/DOS</td>
+             </tr>
+             <tr>
+                <td>schtasks</td>
+                <td>Establece la ejecución de programas y comandos especificados para un punto especificado en el tiempo. Puede crear, eliminar, cambiar y mostrar todas las tareas programadas.
+                </td>
+                <td>10/8/7/Vista/XP</td>
+             </tr>
+             <tr>
+                <td>set</td>
+                <td>Muestra las variables de entorno de CMD.EXE y le permite configurarlas.
+                </td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>shift</td>
+                <td>Mueve variables dentro de archivos por lotes y scripts.
+                </td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>shutdown</td>
+                <td>Apaga el equipo (/s), desencadena un reinicio (/r) o cierra la sesión del usuario (/l). Se muestra una interfaz gráfica de usuario si introduce el parámetro /I como primera opción del comando.
+                </td>
+                <td>10/8/7/Vista/XP</td>
+             </tr>
+             <tr>
+                <td>sort</td>
+                <td>Enumera los datos (de un archivo o comando) y los vuelve a ordenar, directamente en el símbolo del sistema, en un nuevo archivo o en otra salida.
+                </td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>start</td>
+                <td>Abre una nueva ventana del símbolo del sistema en la que puede ejecutar un programa o comando específico.
+                </td>
+                <td>All Win</td>
+             </tr>
+             <tr>
+                <td>subst</td>
+                <td>Asigna una letra de unidad a una ruta de acceso para crear una unidad virtual.
+                </td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>taskkill</td>
+                <td>Finaliza una o más tareas en ejecución. Debe especificar el ID de proceso (PID) o el nombre de la imagen.
+                </td>
+                <td>10/8/7/Vista</td>
+             </tr>
+             <tr>
+                <td>tasklist</td>
+                <td>Enumera todos los procesos en ejecución, también en computadoras remotas, si lo desea. También se debe especificar el ID de proceso, que es necesario para el comando taskkill, por ejemplo.
+                </td>
+                <td>10/8/7/Vista/XP</td>
+             </tr>
+             <tr>
+                <td>time</td>
+                <td>Muestra la hora actual y permite cambiarla. Si se introduce el parámetro /T, el símbolo del sistema solo muestra la hora y no ofrece ninguna opción para cambiarla directamente.
+                </td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>timeout</td>
+                <td>Detiene un proceso durante un tiempo especificado. El comando se utiliza en archivos por lotes y scripts. Si utiliza el parámetro /NOBREAK, el comando ignora cualquier entrada de teclado.
+                </td>
+                <td>10/8/7/Vista</td>
+             </tr>
+             <tr>
+                <td>title</td>
+                <td>Cambia el título del símbolo del sistema. Se permiten espacios, pero no todos los caracteres especiales, como una barra diagonal, por ejemplo, porque pueden interpretarse como instrucciones para un parámetro.
+                </td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>tree</td>
+                <td>Muestra gráficamente la estructura de directorios de una unidad o ruta de acceso. Con el parámetro /F, también se enumeran todos los archivos de las carpetas. /A también garantiza que solo se utilicen caracteres ASCII para la representación gráfica. El comando tiene en cuenta todos los subdirectorios a partir de la ruta dada. Si no introduce una ruta de acceso, la carpeta actual se utiliza como salida.
+                </td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>type</td>
+                <td>Muestra el contenido de un archivo de texto.
+                </td>
+                <td>All Win/DOS</td>
+             </tr>
+             <tr>
+                <td>tzutil</td>
+                <td>Muestra la zona horaria establecida actualmente (/g) o la cambia (/s). El parámetro /l ayuda a determinar las zonas horarias válidas.
+                </td>
+                <td>10/8/7</td>
+             </tr>
+             <tr>
+                <td>ver</td>
+                <td> Muestra el número de versión actual de Windows o MS-DOS.
+                </td>
+                <td>All Win/DOS</td>
+             </tr>
+           
+        </table>
+
+    </div>
+
+</body>
+</html>

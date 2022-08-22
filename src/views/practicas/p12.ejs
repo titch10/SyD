@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<link type="text/css" href="/css/estilos.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2><strong>Práctica 12. Arreglos bidimensionales.</strong></h2>
+    
+    <h3 align="right"><a href="/users/p11"><img src="/css/images/next2.jpg" width="50" height="50" alt="" /></a><a href="/users/p13"><img src="/css/images/next.jpg" width="50" height="50" alt="" /></a>&nbsp;&nbsp;</h3>
+    <div class="div-texto">
+        <h3><strong>Objetivo Específico: Usar un arreglo bidimensional para llevar acabo un proceso del programa.</strong></h3>  
+       
+        <p>Los arreglos bidimensionales son mejor conocidos como matrices, son muy ocupados en métodos algebraicos para encontrar raíces 
+            de números o también para almacenar una gran cantidad de datos. </p>
+           <p> También tienen otras aplicaciones como mapeo, graficas de funciones, facilitan la creación de videojuegos.</p>
+            <p> A continuación veremos un ejemplo de cómo se manejan los arreglos bidimensionales:
+            </p>
+      
+    </div>
+    <div class="scroll-p">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+# include &lt;iostream.h&gt;
+using namespace std;
+int main(void)
+{
+    //Programa que usa arreglos bidimensionales para imprimir una estrella en pantalla.
+
+    int A[51][51]={0};     //se declara un arreglo de enteros y se inicializa en ceros.
+    int B[51][51]={0};
+    int C[51][51]={0};
+    int i,j,k=0;
+
+   for(i=0;i<=25;i++)
+    {
+        for(j=25-i;j<=25+i;j++)
+        {
+            A[i][j]=1;            //se usa doble ciclo for, el primer for es para filas
+        }
+    }
+    for(i=9;i<=50;i++)
+    {
+        for(j=k;j<=50-k;j++)
+        {
+            B[i][j]=1;
+        }
+            k=k+1;
+    }
+    for(i=0;i<=50;i++)
+    {
+            for(j=0;j<=50;j++)
+            {
+                C[i][j]=A[i][j]+B[i][j];
+                printf("%d",C[i][j]);
+            }
+         printf("\n");
+    }
+
+  return 0;
+}
+    </code></pre></div>
+    <div class="div-texto">
+       <p> Como se pudo observar en el ejemplo los arreglos bidimensionales usan doble corchete, es decir que vamos a tener filas y columnas, para manipular los datos de un arreglo bidimensional es necesario usar doble ciclo for, comúnmente se llama anidación de ciclos y sirve para que un ‘for’ controle las filas del arreglo y el otro for las columnas. </p>
+       <p> A continuación, se muestra una captura de pantalla del ejemplo mostrado:</p>
+       <div class="image"><img src="/css/images/salida9.jpg" width="450" height="400"/></div>
+         </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<link type="text/css" href="/css/estilos.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2><strong>Práctica 13. Apuntadores.</strong></h2>
+    <h3 align="right"><a href="/users/p12"><img src="/css/images/next2.jpg" width="50" height="50" alt="" /></a><a href="/users/p14"><img src="/css/images/next.jpg" width="50" height="50" alt="" /></a>&nbsp;&nbsp;</h3>
+    <div class="div-texto">
+        <h3><strong>Objetivo Específico: Aplicar los conceptos básicos de los apuntadores.</strong></h3>  
+        <p>Los apuntadores nos permiten crear variables dinámicas, es decir variables que se pueden adaptar en tamaño o 
+            memoria según las necesidades que tengamos durante el desarrollo del código.  Aunque no sea la única función 
+            nos enfocaremos en esta práctica en la creación de variables de tipo dinámico y en cómo darles uso. En el siguiente
+             ejemplo se muestra cómo hacer uso de los apuntadores: </p>
+    </div>
+    <div class="scroll-p">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+# include &lt;iostream.h&gt;
+# include &lt;conio.h&gt;
+using namespace std;
+
+void pedirDatos();
+void mostrarMatriz(int **,int,int);
+
+int **puntero_matriz,nFilas,nCol;
+
+int main(void)
+{
+   // Realice un programa que lea una matriz din�mica de NxM y cree su matriz traspuesta. 
+   
+   pedirDatos();
+   mostrarMatriz(puntero_matriz,nFilas,nCol);
+   
+   //Liberando memoria de la matriz
+   for(int i=0;i&lt;nFilas;i++){
+       delete[] puntero_matriz[i];
+   }
+   delete[] puntero_matriz;
+   
+   getch();
+   return 0;
+}
+
+
+void pedirDatos(){
+	cout&lt;&lt;"Digite el numero de filas: ";
+	cin&gt;&gt;nFilas;
+	cout&lt;&lt;"Digite el numero de columnas: ";
+	cin&gt;&gt;nCol;
+	
+	//Reservar memoria para la matriz dinamica
+	puntero_matriz = new int*[nFilas]; //Reservando memoria para las filas
+	for(int i=0;i&lt;nFilas;i++){
+		puntero_matriz[i] = new int[nCol]; //Reservando memoria para las columnas
+	}
+	
+	cout&lt;&lt;"\nDigitando datos para la matriz: \n";
+	for(int i=0;i&lt;nFilas;i++){
+		for(int j=0;j&lt;nCol;j++){
+			cout&lt;&lt;"Digite un numero["&lt;&lt;i&lt;&lt;"]["&lt;&lt;j&lt;&lt;"]: ";
+			cin&gt;&gt;*(*(puntero_matriz+i)+j);
+		}
+	}	
+}  
+
+void mostrarMatriz(int **puntero_matriz,int nFilas,int nCol){
+	cout&lt;&lt;"\nMostrando matriz Original: \n";
+	for(int i=0;i&lt;nFilas;i++){
+		for(int j=0;j&lt;nCol;j++){
+			cout&lt;&lt;*(*(puntero_matriz+i)+j)&lt;&lt;" "; //puntero_matriz[i][j]
+		}
+		cout&lt;&lt;"\n";
+	}
+	
+	cout&lt;&lt;"\nMostrando matriz Transpuesta: \n";
+	for(int i=0;i&lt;nFilas;i++){
+		for(int j=0;j&lt;nCol;j++){
+			cout&lt;&lt;*(*(puntero_matriz+j)+i)&lt;&lt;" "; //puntero_matriz[j][i]
+		}
+		cout&lt;&lt;"\n";
+	}
+}
+</code></pre></div>
+<div class="div-texto">
+    <p>En el ejemplo se puede ver que el puntero matriz es declarado como una variable dinámica, mas adelante se establece su tamaño. 
+        A continuación, una captura de pantalla del resultado en consola.</p>
+        <div class="image"><img src="/css/images/salida10.jpg" width="250" height="500"/></div>
+</div>
+</body>
+</html>

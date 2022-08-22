@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<link type="text/css" href="/css/estilos.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2><strong>4.3.3 Operaciones con apuntadores.</strong></h2>
+    <h3 align="right"><a href="/users/d3-2"><img src="/css/images/next2.jpg" width="50" height="50" alt="" /></a><a href="/users/d3-4"><img src="/css/images/next.jpg" width="50" height="50" alt="" /></a>&nbsp;&nbsp;</h3>
+    <div class="div-texto">
+        
+        <p><strong> Asignación dinámica de memoria al estilo de C. </strong></p>
+        
+        <p>Para asignar memoria dinámicamente en C se utilizan las funciones malloc() y free(), definidas típicamente en el archivo de cabecera stdlib.h. La función malloc() reserva memoria y retorna su dirección, o
+        retorna NULL en caso de no haber conseguido suficiente memoria; y la función free() permite liberar la
+        memoria reservada a través de un apuntador. La sintaxis de ambas funciones es como sigue: <br><br>
+        <strong> Código C y C++ </strong></p>
+        </div>
+
+        <div class="scroll">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+        void *malloc(size_t tam_bloque); // size_t es un tipo de datos entero.
+        // tam_bloque es el tamaño en bytes
+        // del bloque de memoria a reservar.
+        void free(void *bloque); // bloque es un apuntador a la zona
+        // de memoria a liberar.
+        </code></pre></div>
+
+        <div class="div-texto">
+        <p>Como se puede apreciar, malloc() reserva memoria sin importar el tipo de datos que se almacenará en
+        ella, retornando un apuntador a void. Por esta razón, se hace necesario convertir el tipo de apuntador al
+        tipo del apuntador que guardará la dirección. También es necesario calcular exactamente cuántos bytes se
+        requieren reservar, ayudándose con el uso del operador sizeof. Ejemplos: <br><br>
+
+        <strong> Código C y C++ </strong></p>
+        </div>
+
+        <div class="scroll">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+        typedef struct
+        {
+        char nombre[20];
+        int edad;
+        } Data;
+        Data *p_data; // Declaración de un apuntador a Data
+        int i;
+        p_data = (Data*) malloc(sizeof(Data)); // Reservación de memoria para un registro
+        if (p_data != NULL) // Verificación de reservación
+        {
+        strcpy(p_data->nombre, "Rachel"); // Inicialización de datos
+        p_data->edad = 21; // en la memoria reservada
+        free(p_data); // Liberación de memoria
+        }
+        // Reservación de memoria para un arreglo de 10 registros
+        p_data = (Data*) malloc(sizeof(Data)*10);
+        if (p_data != NULL) // Verificación de reservación
+        {
+        // Lectura de datos del arreglo
+        for (i = 0; i &lt; 10; i++)
+        cin >> p_data[i].nombre >> p_data[i].edad;
+        // Liberación de memoria del arreglo
+        free(p_data);
+        }
+        </code></pre></div>
+</body>
+</html>

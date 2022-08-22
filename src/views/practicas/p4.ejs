@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<link type="text/css" href="/css/estilos.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2><strong>Práctica 4. Entrada y salida por consola.</strong></h2>
+    <h3 align="right"><a href="/users/p3"><img src="/css/images/next2.jpg" width="50" height="50" alt="" /></a><a href="/users/p5"><img src="/css/images/next.jpg" width="50" height="50" alt="" /></a>&nbsp;&nbsp;</h3>
+    <div class="div-texto">
+        <h3><strong>Objetivo Específico: Mediante el lenguaje C o C++ usar las librerías vistas en la teoría para introducir datos por teclado y 
+            mostrarlos en consola.</strong></h3>
+        
+        
+        <p>Recordemos que la librería iostream es un componente que nos habilita las operaciones de entrada y salida de datos, así que la usaremos
+            para poder ingresar datos de cualquier tipo y poder mostrarlos.
+        </p>
+        <p>En el siguiente ejemplo veremos como se puede leer un entero o caracter y mostrarlo en pantalla. </p>
+    </div>
+
+    <div class="scroll-p">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+# include &lt;iostream.h&gt;
+using namespace std;
+int main(void)
+{
+    int x;  //creamos un dato de tipo entero.
+    char a;    // creamos un dato de tipo caracter.
+          
+    cout&lt;&lt;"Ingresa un número: ";
+    cin&gt;&gt;x;       //se lee el dato tipo entero.      
+
+
+    cout&lt;&lt;"Ingresa una letra: ";
+    cin&gt;&gt;a;       //se lee el dato tipo caracter.   
+    
+    cout&lt;&lt;"Tus datos ingresados son:"&lt;&lt; x &lt;&lt;" y "&lt;&lt;a;      //Se muestra en consola los datos ingresados.
+    
+    return 0;
+}
+    </code></pre></div>
+
+    <div class="div-texto">
+        <p>Recordemos que para leer un dato se usa la sentencia 'cin&gt;&gt;' y para mostrar un dato o un mensaje en consola se usa la siguiente sentencia 'cout&lt;&lt;'. <br>
+            El resultado obtenido al compilar el código es el siguiente: 
+        </p>
+        <div class="image"><img src="/css/images/salida1.jpg" width="500" height="200"/></div>
+    </div>
+</body>
+</html>

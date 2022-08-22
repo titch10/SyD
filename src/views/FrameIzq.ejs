@@ -3,15 +3,9 @@
 <head>
 	<title>Polilibro</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="/css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Hind|Pacifico" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="/css/mainpoli.js"></script>
-<link type="text/css" href="/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link type="text/css" href="/css/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-<link type="text/css" href="/css/css/theme.css" rel="stylesheet">
-<script src="/css/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<%- include("partials/headers") -%>
+	
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body background="/css/images/esimegris.jpg">
 	
@@ -30,15 +24,19 @@
 		
 		
 		<ul class="widget widget-menu unstyled">
-			<li><a href="/users/evaluacion" target="mainFrame"><i class="menu-icon icon-paste"></i>Evaluación</a></li>
+			<li><a href="/users/evaluacion" target="mainFrame"><i class="menu-icon icon-paste"></i>Temario</a></li>
 			<li><a href="/users/practicas" target="mainFrame"><i class="menu-icon icon-table"></i>Prácticas</a></li>
 			<li><a href="/users/proyecto" target="mainFrame"><i class="menu-icon icon-bar-chart"></i>Proyecto</a></li>
 		    
 			<li><a class="collapsed" data-toggle="collapse" href="#togglePages"><i class="menu-icon icon-cog">
 			</i><i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right">
-			</i>Temario </a>
+			</i>Unidades </a>
 				<ul id="togglePages" class="collapse unstyled" >
 					<li><a href="/users/unidad1" target="mainFrame"><i class="icon-inbox"></i>Unidad 1 </a></li>
+					<li><a href="/users/unidad2" target="mainFrame"><i class="icon-inbox"></i>Unidad 2 </a></li>
+					<li><a href="/users/unidad3" target="mainFrame"><i class="icon-inbox"></i>Unidad 3 </a></li>
+					<li><a href="/users/unidad4" target="mainFrame"><i class="icon-inbox"></i>Unidad 4 </a></li>
+					<li><a href="/users/unidad5" target="mainFrame"><i class="icon-inbox"></i>Unidad 5 </a></li>
 				</ul>
 			</li>
 		</ul>

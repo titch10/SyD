@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<link type="text/css" href="/css/estilos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <h2><strong>4.1.2 Arreglos numéricos y de caracteres.</strong></h2>
+    <h3 align="right"><a href="/users/d1-1"><img src="/css/images/next2.jpg" width="50" height="50" alt="" /></a><a href="/users/d2"><img src="/css/images/next.jpg" width="50" height="50" alt="" /></a>&nbsp;&nbsp;</h3>
+    <div class="div-texto">
+        <p>En este artículo analizaremos qué es un Arreglo en programación o también conocido como Array y que son las cadenas de caracteres, 
+        además de ver cuáles son sus diferencias. Estos tipos de datos se utilizan y son muy provechosos a la hora de manejar texto, querer 
+        crear buscadores o uso de base de datos. También veremos un ejemplo de cómo utilizar arreglos en lenguaje en C.</p>
+
+       <p> Arreglo: Un “Arreglo” o también conocido como “Array” es un tipo de dato cuya función es guardar una serie de datos o caracteres 
+        del mismo tipo. A este se le debe declarar con un número limitado espacios de memoria. La sintaxis para declarar un arreglo es la 
+        siguiente:</p>
+<p>
+        <p>Código:</p>
+        </div>
+        <div class="scroll">
+            <pre class="prettyprint linenums:1"><code class="language-c">
+            # include &lt;iostream.h&gt;
+            int main(void){
+              
+                char Nombre[Numero]= “Datos a guardar”;  //Declarando arreglo tipo Char (caracteres)
+                int Nombre[Numero]= “Datos a guardar”; //Declarando arreglo tipo int (numérico)
+            
+            }
+                
+            </code></pre></div>
+    <div class="div-texto">
+       
+        <p> Donde: </p>
+        <ul>
+           <li> Nombre: Es el nombre de la variable de nuestro arreglo. </li>
+           <li>Numero: Es un valor numérico que indicará el tamaño de nuestro arreglo (por ejemplo 5,10 o 20). </li>
+           <li>Datos a guardar: Es el dato que queremos que sea guardado en nuestro arreglo.</li>
+        </ul>
+        <p>En un arreglo, cada carácter que forma el dato que queremos almacenar es guardado en una casilla por separado, por ejemplo,
+         si queremos guardar la palabra “Venezuela” en una variable llamada “País”, se guardaría de la siguiente manera:<p>
+            <div class="image"><img src="/css/images/array.jpg" width="1000" height="50"/></div>
+        
+            <p>Como podemos notar, nuestro arreglo debe estar limitado por un número razonable, 
+                ¿Por qué? Porque si nosotros declaramos un arreglo con muchos espacios que no vamos a utilizar, 
+                este consume recursos de memoria que podrían utilizarse para otras cosas, que ciertamente con la tecnología 
+                actual los recursos han aumentado muchísimo, sin embargo, como programadores deberemos respetar la regla de 
+                consumir la menor cantidad de recursos posibles, para hacer nuestros programas más rápidos y eficientes.</p>
+
+
+             <p>Para definir cuál será la cantidad de caracteres que queremos almacenar debemos pensar un numero razonable y restarle uno, 
+                es decir, si queremos que nuestro tenga 20 caracteres, el numero indicado será 19, esto es debido a que en Lenguaje C 
+                (y en la mayoría de lenguajes) los números se empiezan a contar en 0, es decir, la casilla 0 también tiene un valor, 
+                por lo tanto la cadena seria del 0-19 = 20 valores. El carácter final de nuestra cadena siempre será “\0”, esto 
+                indica el final de nuestra cadena y también ocupa un espacio de memoria, por lo que debe tomarse en cuenta a la hora de
+                 programar la capacidad de memoria que tendrá nuestra cadena.</p>
+    </div>
+
+</body>
+</html>

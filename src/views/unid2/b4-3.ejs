@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<link type="text/css" href="/css/estilos.css" rel="stylesheet">
+
+</head>
+
+<body>
+   <h2><strong>2.4.3 Funciones que regresan valores. </strong></h2>
+   <h3 align="right"><a href="/users/b4-2"><img src="/css/images/next2.jpg" width="50" height="50" alt="" /></a><a href="/users/unidad3"><img src="/css/images/next.jpg" width="50" height="50" alt="" /></a>&nbsp;&nbsp;</h3>
+    <div class="div-texto">
+        <p> Existen dos formas de pasar argumentos a las funciones: por valor y por referencia. El primero es utilizado por defecto con la 
+        declaración usual de parámetros. En el paso "por valor", se crean copias de los argumentos pasados a la función, los cuales, 
+        junto a las variables locales (incluyendo el posible valor devuelto), y la dirección de vuelta a la rutina que efectúa la invocación, 
+        son pasados a la pila en la secuencia de llamada. Más tarde, cuando termina su ejecución definitivamente, es decir, cuando el control 
+        vuelve a la función que la invocó, toda esta información es sacada de la pila mediante la secuencia de retorno (y se pierde). 
+        Estos procesos suponen un consumo de tiempo y espacio (memoria), a veces considerable. </p>
+
+        <p><strong> Paso por valor </strong></p>
+        <p> Hemos visto que el paso de parámetros por valor significa que existen copias de los argumentos formales (estas copias son variables 
+        locales de la función llamada), y que una función no puede alterar ninguna variable de la función que la invocó.</p>
+        
+        <li> La única excepción es el caso de las matrices. Cuando se utiliza una matriz como argumento en la llamada a una función, 
+            el valor pasado es un puntero a la dirección de memoria del principio de la matriz.</li>
+        
+        <p> Cuando los argumentos pasan por valor pero no hay concordancia entre el tipo de los argumentos actuales y los argumentos formales 
+        utilizados en la declaración de la función, entonces se produce un modelado de tipo antes de la asignación. </p>
+        
+        
+        <p><strong> Pasar un puntero </strong></p>
+        <p> En C clásico, cuando se desea que la función llamada pueda alterar el valor de variables de la función que la invoca, 
+        o ahorrar el espacio que supone la copia local de los argumentos (que pueden ser estructuras de datos muy grandes), 
+        la solución consistía en utilizar punteros a las variables respectivas como argumentos para la función (en vez de pasar 
+        las variables en sí mismas). A su vez, la función llamada debía declarar el parámetro como puntero, y acceder a la variable 
+        indirectamente a través de él. En otras palabras: cuando en C se desea que un valor X pase a una función F y que esta pueda 
+        alterar el valor de X en la función que la invocó, el argumento utilizado es &X (la dirección de X). De esta forma, aunque F 
+        recibe una copia de &X, puede alterar el valor original a través de esta dirección. Esta técnica puede tener sus ventajas. 
+        Por ejemplo, si X es una estructura muy grande, pero puede tener efectos colaterales peligrosísimos y ser una fuente de errores 
+        difíciles de detectar. </p>
+        
+        <p><strong> Paso por referencia </strong></p>
+        <p> C++ permite utilizar la técnica del C clásico descrita arriba, pero también utilizar el paso de argumentos por referencia
+         (en realidad es una variante semántica del proceso anteriormente descrito). Para ello se utiliza el declarador de referencia &. 
+         Las referencias presentan las ventajas de los punteros, en el sentido que permiten modificar los valores de los objetos pasados 
+         como argumento, y de que permiten ahorrar espacio si hay que pasar objetos muy grandes, pero no presentan los peligros potenciales 
+         de aquellos. En caso necesario las referencias pueden declararse constantes, indicando así que la función invocada no modificará 
+         estos valores. En estos casos, la utilización de referencias obedece casi exclusivamente a razones de eficacia en el mecanismo de 
+         llamada. </p>
+        
+        
+        <p> A continuación se muestran tres implementaciones de una misma función; cada una con una forma distinta para paso del argumento. </p>
+        
+        <p><strong> Implementación-1: Sistema clásico, paso "por valor" </strong> </p>
+    </div>
+    <div class="scroll">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+        int pru1(int n){   // n entero; pasa "por valor"
+            return 3 * n;
+          }
+          ...
+          int x, i = 4;
+          x = pru1(i);        // ahora: x = 12, i = 4
+          int& ry = i;
+          x = pru (ry);       // ahora: x = 12, i = 4
+        </code></pre></div>
+
+       <div class="div-texto">
+        <p> La última sentencia no es un paso por referencia, sino por valor (a pesar de que el argumento actual sea una referencia). </p>
+        
+        <p><strong> Implementación-2: Sistema clásico, paso de "punteros por valor" (seudo-referencia) </strong></p> </div>
+        <div class="scroll">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+            void pru2(int* np) {  // np puntero-a-entero; pasa "por valor"
+               *np = (*np) * 3;
+            }
+            . . .
+            int x = 4;
+            pru2(&x);   // ahora x = 12
+        </code></pre></div>
+        
+        <div class="div-texto">
+        <p> En este caso, pasar el valor &x (dirección de x) como argumento, es equivalente a pasar un puntero a dicha variable (que es lo exigido en la definición de pru2). Es decir, la última línea se puede sustituir por las siguientes: </p>
+        </div> 
+        <div class="scroll">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+            int* ptr = &x         // define puntero-a-x
+            pru2(ptr);            // pasa el puntero como argumento
+            Implementación-3: Sistema C++, paso "por referencia"
+            
+            void pru3(int& n) { // n tipo "referencia-a-int"; pasa "por  referencia"
+              n = 3 * n;
+            }
+             . . .
+            int x = 4;
+            pru3(x);            // ahora x = 12
+        </code></pre></div>
+       <div class="div-texto">
+        <p> En este último caso, la declaración int& n como parámetro de la función pru3, establece que este n sea declarado como 
+        "referencia-a-entero", de forma que cuando se pasa el argumento x, la función crea un valor n que es una especie de alias o 
+        espejo de x, de forma que la expresión n = 3*n tiene el mismo efecto que x = 3*x. </p>
+
+        <p> En la declaración de una referencia, cuando el iniciador es una constante, o un objeto de tipo diferente que el referenciado, 
+        se crea un objeto temporal para el que la referencia actúa como un alias. Esta creación de objetos temporales es lo que permite 
+        la conversión de tipos referencia-a-tipoX cuando se utilizan como parámetros de funciones y no hay concordancia entre el valor 
+        recibido y el esperado (suponiendo que exista posibilidad de conversión). </p>
+        </div>
+</body>
+</html>

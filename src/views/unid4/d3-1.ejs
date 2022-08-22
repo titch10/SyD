@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+<link type="text/css" href="/css/estilos.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2><strong>4.3.1 Concepto.</strong></h2>
+    <h3 align="right"><a href="/users/d3"><img src="/css/images/next2.jpg" width="50" height="50" alt="" /></a><a href="/users/d3-2"><img src="/css/images/next.jpg" width="50" height="50" alt="" /></a>&nbsp;&nbsp;</h3>
+    <div class="div-texto">
+    
+    <p>Cuando se declara una variable, el compilador reserva un espacio de memoria para ella y asocia el nombre
+    de ésta a la dirección de memoria desde donde comienzan los datos de esa variable. Las direcciones de memoria
+    se suelen describir como números en hexadecimal.</p>
+    <p>Un apuntador es una variable cuyo valor es la dirección de memoria de otra variable. Se dice que un
+    apuntador “apunta” a la variable cuyo valor se almacena a partir de la dirección de memoria que contiene el
+    apuntador. Por ejemplo, si un apuntador p almacena la dirección de una variable x, se dice que “p apunta a
+    x”.</p>
+
+
+    <p><strong> 4. Declaración de apuntadores</strong> </p>
+    
+    <p> Para declarar un apuntador se especifica el tipo de dato al que apunta, el operador '*', y el nombre del
+    apuntador. La sintaxis es la siguiente: </p>
+    <p><strong> &lt;tipo de dato apuntado&gt; *&lt;indentificador del apuntador&gt; </strong></p>
+    
+    <p> A continuación se muestran varios ejemplos:
+     Código C y C++</p> </div>
+     <div class="scroll">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+            int *ptr1; // Apuntador a un dato de tipo entero (int)
+            char *cad1, *cad2; // Dos apuntadores a datos de tipo carácter (char)
+            float *ptr2; // Apuntador a un dato de tipo punto-flotante (float)
+        </code></pre></div>
+   
+        <div class="div-texto">
+  
+   <p><strong> 5. Asignación de apuntadores </strong></p>
+   <p> Se pueden asignar a un apuntador direcciones de variables a través del operador de referenciación ('&') o
+    direcciones almacenadas en otros apuntadores. Ejemplos: </p>
+    <p> Código C y C++ </p> </div>
+    <div class="scroll">
+        <pre class="prettyprint linenums:1"><code class="language-c">
+        int i = 5;
+        int *p, *q;
+        p = &#38;i; // Se le asigna a 'p' la dirección de 'i'
+        q = p; // Se le asigna a 'q' la dirección almacenada en 'p' (la misma de 'i')
+
+        </code></pre></div>
+    
+</body>
+</html>

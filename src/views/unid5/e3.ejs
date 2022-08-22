@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link type="text/css" href="/css/estilos.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2><strong>5.3 Pruebas modulares e integrales.</strong></h2>
+    <h3 align="right"><a href="/users/e2"><img src="/css/images/next2.jpg" width="50" height="50" alt="" /></a><a href="/users/e4"><img src="/css/images/next.jpg" width="50" height="50" alt="" /></a>&nbsp;&nbsp;</h3>
+    <div class="div-texto">
+        <p> <strong> El objetivo de las pruebas de integración </strong>es verificar el correcto ensamblaje entre los distintos componentes una vez 
+        que han sido probados unitariamente con el fin de comprobar que interactúan correctamente a través de sus interfaces, 
+        tanto internas como externas, cubren la funcionalidad establecida y se ajustan a los requisitos no funcionales especificados 
+        en las verificaciones correspondientes.</p>
+
+
+        <p> En las pruebas de integración se examinan las interfaces entre grupos de componentes o subsistemas para asegurar que son 
+        llamados cuando es necesario y que los datos o mensajes que se transmiten son los requeridos.</p>
+        
+        <p> Debido a que en las pruebas unitarias es necesario crear módulos auxiliares que simulen las acciones de los componentes 
+        invocados por el que se está probando y a que se han de crear componentes «conductores» para establecer las precondiciones
+         necesarias, llamar al componente objeto de la prueba y examinar los resultados de la prueba, a menudo se combinan los tipos 
+         de prueba unitarias y de integración.</p>
+        
+        <p> Los tipos fundamentales de integración son los siguientes:</p>
+        
+       <p><strong> Integración incremental </strong></p>
+        
+        <p> Se combina el siguiente componente que se debe probar con el conjunto de componentes que ya están probados y se va 
+        incrementando progresivamente el número de componentes a probar.</p>
+        
+        <p> Con el tipo de prueba incremental lo más probable es que los problemas que surjan al incorporar un nuevo componente 
+        o un grupo de componentes previamente probado, sean debidos a este último o a las interfaces entre éste y los otros componentes.</p>
+        
+        <p><strong> Se distinguen las siguientes estrategias de integración: </strong></p>
+        <ul>
+        <li><strong> De arriba abajo (top-down).</strong> El primer componente que se desarrolla y prueba es el primero de la jerarquía (A). 
+            Los componentes de nivel más bajo se sustituyen por componentes auxiliares para simular a los componentes invocados. En este caso 
+            no son necesarios componentes conductores. Una de las ventajas de aplicar esta estrategia es que las interfaces entre los distintos 
+            componentes se prueban en una fase temprana y con frecuencia.</li>
+        <li><strong>De abajo arriba (bottom-up). </strong>En este caso se crean primero los componentes de más bajo nivel (E, F) y se crean 
+            componentes conductores para simular a los componentes que los llaman. A continuación se desarrollan los componentes de más alto 
+            nivel (B, C, D) y se prueban. Por último dichos componentes se combinan con el que los llama (A). Los componentes auxiliares son 
+            necesarios en raras ocasiones. <br>
+        Este tipo de enfoque permite un desarrollo más en paralelo que el enfoque de arriba abajo, pero presenta mayores dificultades 
+        a la hora de planificar y de gestionar.</li>
+        <li><strong>Estrategias combinadas. </strong>A menudo es útil aplicar las estrategias anteriores conjuntamente. De este modo, 
+        se desarrollan partes del sistema con un enfoque «top-down«, mientras que los componentes más críticos en el nivel más bajo 
+        se desarrollan siguiendo un enfoque «bottom-up«. En este caso es necesaria una planificación cuidadosa y coordinada de modo 
+        que los componentes individuales se «encuentren» en el centro. </li>
+        </ul>
+    </div>
+</body>
+</html>

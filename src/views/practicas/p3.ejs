@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link type="text/css" href="/css/estilos.css" rel="stylesheet">
+</head>
+
+<body>
+    <h2><strong>Práctica 3. Compiladores.</strong></h2>
+    <h3 align="right"><a href="/users/p2"><img src="/css/images/next2.jpg" width="50" height="50" alt="" /></a><a href="/users/p4"><img src="/css/images/next.jpg" width="50" height="50" alt="" /></a>&nbsp;&nbsp;</h3>
+    <div class="div-texto">
+        <h3><strong>Objetivo Específico: Instalar un compilador que permita compilar código c y c++</strong></h3>
+        <p>Recomendamos instalar primeramente Visual Studio Code, ya que tiene una extensión para poder compilar C++ y C además de que nos indicara si hay algún error en nuestro código.
+
+            En este <a href="https://code.visualstudio.com/" target="_blank"> enlace </a> encontrarás el descargable de VS desde su página oficial.
+        </p>
+        
+        <h4>Pasos para instalar el compilador de C++:</h4>
+
+        <p>Una vez que hemos instalado Visual Studio Code, tenemos que instalar un paquete en la sección “extensiones” 
+            dentro de Visual Code que lleva el nombre de “C/C++ Extension pack.”</p>
+
+            <div class="image"><img src="/css/images/cpack.jpg" width="800" height="300"/></div>
+
+        <p>Esta extensión será de utilidad ya que nos da la posibilidad de tener atajos a comandos que son muy utilizados mientras 
+            programamos en C/C++, también nos permite compilar y nos indica si hay errores en el código.</p>
+
+        <p>El segundo paso es instalar la librería de Mingw para que VS pueda interpretar el lenguaje c/c++. Nos tenemos que dirijir a la 
+            siguiente página <a href="https://www.msys2.org/" target="_blank"> www.msys2.org </a> y descargar msys2.exe
+        </p>
+        <div class="image"><img src="/css/images/ming.jpg" width="400" height="200"/></div>
+
+        <p>Cuando se termine de instalar se ejecutará el programa Mingw y el siguiente paso es actualizar todas las librerías. 
+            Para ello escribiremos el siguiente comando en la ventana de Mingw: <strong>pacman -Syu</strong>  </p>
+         <p>Una vez instalada la paquetería , escribiremos el siguiente comando en el cmd de mingw para instalar las versiones de los compiladores: 
+         <strong>$ pacman -S --needed base-devel mingw-w64-x86_64-toolchain</strong> 
+              
+         </p>
+         <p>Para finalizar, agregamos la ruta <strong> C:\msys64\mingw64\bin </strong> al path del sistema y estaremos listos para compilar 
+            un programa en VS.</p>
+        
+            <p>Para correr un programa daremos click en la pestaña Terminal y en Run Build Task se leccionamos el compilador g++.
+              <br>Con esto se generará un archivo .exe que se pobra ejecutar a travez del siguiente comando en terminal: ./main.
+            </p>
+            <h3>Ejemplo: <a href="https://code.visualstudio.com/docs/cpp/config-mingw" target="_blank"> guía completa.</a></h3>
+            <div class="image"><img src="/css/images/pacman2.jpg" width="600" height="400"/></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link type="text/css" href="/css/estilos.css" rel="stylesheet">
+</head>
+
+<body>
+   <h2><strong>2.4.1 Argumentos y parámetros formales.</strong></h2>
+   <h3 align="right"><a href="/users/b4"><img src="/css/images/next2.jpg" width="50" height="50" alt="" /></a><a href="/users/b4-2"><img src="/css/images/next.jpg" width="50" height="50" alt="" /></a>&nbsp;&nbsp;</h3>
+    <div class="div-texto">
+       <p>Parámetros y argumentos (programación): Un argumento o parámetro es el medio a partir del cual podemos expandir el ámbito de 
+        variables locales de funciones, hacia otras funciones y además quienes nos permiten establecer comunicaciones entre funciones. 
+        Si nos vemos ante la necesidad de visualizar o modificar el valor de una variable local en otra función que llamaremos, debemos 
+        invocar a dicha función haciendo referencia de su nombre, seguido de los parámetros o nombres de variables para las cuales, en 
+        teoría ampliaríamos su ámbito.</p>
+
+      <p>Las palabras parámetro y argumento, aunque de significado similar, tiene distintas connotaciones semánticas: Se denominan 
+        parámetros los tipos declarados en el prototipo (que deben corresponder con los declarados en la definición). Cuando se realiza 
+        una llamada a la función, los "valores" pasados se denominan argumentos. A veces se utilizan también las expresiones argumentos 
+        formales, para los parámetros y argumentos actuales para los valores pasados.</p>
+
+        <p><strong> Agumentos reales # </strong></p>
+       
+        <p> Los argumentos que se mencionan en la llamada a la función se conoce como el argumento real. Por ejemplo:
+        <br><br>
+        <strong> funcion(a, b){ codigo }; </strong> &nbsp;
+        Aquí ay b son argumentos reales.
+        <br><br>
+        Los argumentos reales pueden ser constantes, variables, expresiones, etc.</p>
+        
+        
+        <p><strong> Argumentos formales # </strong></p>
+        
+        <p> Los argumentos que se mencionan en la definición de la función se llaman argumentos formales. Los argumentos formales 
+            son muy similares a las variables locales dentro de la función. Al igual que las variables locales, los argumentos 
+            formales se destruyen cuando la función termina.</p>
+        
+        <p><strong> int funcion(int n){ codigo } </strong> &nbsp;&nbsp;
+        Aquí 'n' es el argumento formal. Cosas a recordar sobre los argumentos reales y formales. </p>
+        
+        <p> El orden, el número y el tipo de los argumentos reales en la llamada a la función deben coincidir con los argumentos formales de la función.
+        Si hay un desajuste de tipo entre los argumentos reales y formales, entonces el compilador intentará convertir el tipo de los argumentos reales a los formales si es legal, de lo contrario, se pasará un valor basura al argumento formal.
+        Los cambios realizados en el argumento formal no afectan a los argumentos reales.
+        <p> El orden, el número y el tipo de los argumentos reales en la llamada a la función deben coincidir con los argumentos formales de la función.
+        El siguiente programa demuestra este comportamiento. </p>
+    </div>
+    
+</body>
+</html>
